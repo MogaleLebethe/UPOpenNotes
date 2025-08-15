@@ -1,0 +1,202 @@
+%VectorPropertiesProofs.tex
+% This file contains the proofs of the properties of vectors defined in WTW124.tex.
+
+\begin{proofbox}
+\begin{enumerate}[label=\arabic*., resume=vecprops]
+
+\item \textbf{Commutativity of Vector Addition}
+
+Assume $\bar{x}, \bar{y} \in \mathbb{R}^n$. 
+
+We want to show that $\bar{x} + \bar{y} = \bar{y} + \bar{x}$.
+
+\quad $\bar{x} + \bar{y} = \langle x_1 + y_1,\ x_2 + y_2,\ \ldots,\ x_n + y_n \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= \langle y_1 + x_1,\ y_2 + x_2,\ \ldots,\ y_n + x_n \rangle$ \hfill [Commutativity of Real Numbers]
+
+\quad $= \bar{y} + \bar{x}$ \hfill [Def. of Vector Addition]
+
+\hfill $\qed$
+
+\item \textbf{Associativity of Vector Addition}
+
+Assume $\bar{x}, \bar{y}, \bar{z} \in \mathbb{R}^n$. 
+
+We want to show that $\bar{x} + (\bar{y} + \bar{z}) = (\bar{x} + \bar{y}) + \bar{z}$.
+
+\quad $\bar{x} + (\bar{y} + \bar{z}) = \bar{x} + \langle y_1 + z_1,\ y_2 + z_2,\ \ldots,\ y_n + z_n \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= \langle x_1 + (y_1 + z_1),\ x_2 + (y_2 + z_2),\ \ldots,\ x_n + (y_n + z_n) \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= \langle (x_1 + y_1) + z_1,\ (x_2 + y_2) + z_2,\ \ldots,\ (x_n + y_n) + z_n \rangle$ [Associativity of Real Numbers]
+
+\quad $= \langle (x_1 + y_1),\ (x_2 + y_2),\ \ldots,\ (x_n + y_n) \rangle + \langle z_1,\ z_2,\ \ldots,\ z_n \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= (\bar{x} + \bar{y}) + \bar{z}$ \hfill [Def. of Vector Addition]
+
+\hfill $\qed$
+
+\item \textbf{Additive Identity of Vectors}
+
+Assume $\bar{x} \in \mathbb{R}^n$. 
+
+We want to show that $\bar{x} + \bar{0} = \bar{x}$.
+
+\quad $\bar{x} + \bar{0} = \langle x_1 + 0,\ x_2 + 0,\ \ldots,\ x_n + 0 \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= \langle x_1,\ x_2,\ \ldots,\ x_n \rangle$ \hfill [Identity Property of Real Numbers]
+
+\quad $= \bar{x}$ \hfill [Def. of Vector Equality]
+
+\hfill $\qed$
+
+\item \textbf{Additive Inverse of a Vector} 
+ 
+Assume $\bar{x} \in \mathbb{R}^n$. 
+
+We want to show that $\bar{x} + (-\bar{x}) = \bar{0}$.
+
+\quad $\bar{x} + (-\bar{x}) = \langle x_1 + (-x_1),\ x_2 + (-x_2), \ \ldots, \ x_n + (-x_n) \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= \langle 0, \ 0, \ \ldots, \ 0 \rangle$ \hfill [Additive Inverse of Real Numbers]
+
+\quad $= \bar{0}$ \hfill [Def. of the Zero Vector]
+
+\hfill $\qed$
+
+\end{enumerate}
+\end{proofbox}
+
+\newpage
+
+\begin{proofbox}
+\begin{enumerate}[label=\arabic*., resume=vecprops]
+
+\item \textbf{Associativity of Scalar Multiplication}
+
+Assume $\bar{x} \in \mathbb{R}^n$.
+
+We want to show that $a(b\bar{x}) = (ab)\bar{x}$.
+
+\quad $a(b\bar{x}) = a\langle bx_1,\ bx_2,\ \ldots,\ bx_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle a(bx_1),\ a(bx_2),\ \ldots,\ a(bx_n) \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle (ab)x_1,\ (ab)x_2,\ \ldots,\ (ab)x_n \rangle$ \hfill [Associativity of Real Numbers]
+
+\quad $= (ab)\langle x_1,\ x_2,\ \ldots,\ x_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= (ab)\bar{x}$ \hfill [Def. of Vector Equality]
+
+\hfill $\qed$
+
+\item \textbf{Multiplicative Identity}
+
+Assume $\bar{x} \in \mathbb{R}^n$.
+
+We want to show that $1\bar{x} = \bar{x}$.
+
+\quad $1\bar{x} = 1\langle x_1,\ x_2,\ \ldots,\ x_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle 1x_1,\ 1x_2,\ \ldots,\ 1x_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle x_1,\ x_2,\ \ldots,\ x_n \rangle$ \hfill [Identity Property of Real Numbers]
+
+\quad $= \bar{x}$ \hfill [Def. of Vector Equality]
+
+\hfill $\qed$
+
+\item \textbf{Multiplication by $-1$}
+
+Assume $\bar{x} \in \mathbb{R}^n$.
+
+We want to show that $(-1)\bar{x} = -\bar{x}$.
+
+\quad $(-1)\bar{x} = (-1)\langle x_1,\ x_2,\ \ldots,\ x_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle (-1)x_1,\ (-1)x_2,\ \ldots,\ (-1)x_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle -x_1,\ -x_2,\ \ldots,\ -x_n \rangle$ \hfill [Multiplication by $-1$ in Real Numbers]
+
+\quad $= -\bar{x}$ \hfill [Def. of Additive Inverse of a Vector]
+
+\hfill $\qed$
+
+\item \textbf{Multiplication by a Zero Scalar}
+
+Assume $\bar{x} \in \mathbb{R}^n$.
+
+We want to show that $0\bar{x} = \bar{0}$.
+
+\quad $0\bar{x} = 0\langle x_1,\ x_2,\ \ldots,\ x_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle 0x_1,\ 0x_2,\ \ldots,\ 0x_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle 0,\ 0,\ \ldots,\ 0 \rangle$ \hfill [Multiplication by Zero in Real Numbers]
+
+\quad $= \bar{0}$ \hfill [Def. of the Zero Vector]
+
+\hfill $\qed$
+
+\end{enumerate}
+\end{proofbox}
+
+\newpage
+
+\begin{proofbox}
+\begin{enumerate}[label=\arabic*., resume=vecprops]
+
+\item \textbf{Multiplying a Zero Vector}
+
+Assume $\bar{x} \in \mathbb{R}^n$.
+
+We want to show that $a\bar{0} = \bar{0}$.
+
+\quad $a\bar{0} = a\langle 0,\ 0,\ \ldots,\ 0 \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle a \cdot 0,\ a \cdot 0,\ \ldots,\ a \cdot 0 \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle 0,\ 0,\ \ldots,\ 0 \rangle$ \hfill [Multiplication by Zero in Real Numbers]
+
+\quad $= \bar{0}$ \hfill [Def. of the Zero Vector]
+
+\hfill $\qed$
+
+\item \textbf{Distributivity over Vector Addition}
+
+Assume $\bar{x}, \bar{y} \in \mathbb{R}^n$ and $a \in \mathbb{R}$.
+
+We want to show that $a(\bar{x} + \bar{y}) = a\bar{x} + a\bar{y}$.
+
+\quad $a(\bar{x} + \bar{y}) = a\langle x_1 + y_1,\ x_2 + y_2,\ \ldots,\ x_n + y_n \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= \langle a(x_1 + y_1),\ a(x_2 + y_2),\ \ldots,\ a(x_n + y_n) \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle ax_1 + ay_1,\ ax_2 + ay_2,\ \ldots,\ ax_n + ay_n \rangle$ \hfill [Distributivity of Real Numbers]
+
+\quad $= \langle ax_1,\ ax_2,\ \ldots,\ ax_n \rangle + \langle ay_1,\ ay_2,\ \ldots,\ ay_n \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= a\bar{x} + a\bar{y}$ \hfill [Def. of Scalar Vector Multiplication]
+
+\hfill $\qed$
+
+\item \textbf{Distributivity over Scalar Addition}
+
+Assume $\bar{x} \in \mathbb{R}^n$ and $a, b \in \mathbb{R}$.
+
+We want to show that $(a + b)\bar{x} = a\bar{x} + b\bar{x}$.
+
+\quad $(a + b)\bar{x} = (a + b)\langle x_1,\ x_2,\ \ldots,\ x_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle (a + b)x_1,\ (a + b)x_2,\ \ldots,\ (a + b)x_n \rangle$ \hfill [Def. of Scalar Vector Multiplication]
+
+\quad $= \langle ax_1 + bx_1,\ ax_2 + bx_2,\ \ldots,\ ax_n + bx_n \rangle$ \hfill [Distributivity of Real Numbers]
+
+\quad $= \langle ax_1,\ ax_2,\ \ldots,\ ax_n \rangle + \langle bx_1,\ bx_2,\ \ldots,\ bx_n \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= a\bar{x} + b\bar{x}$ \hfill [Def. of Scalar Vector Multiplication]
+
+\hfill $\qed$
+
+\end{enumerate}
+\end{proofbox}

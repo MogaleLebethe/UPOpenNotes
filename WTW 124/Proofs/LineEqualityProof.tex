@@ -1,0 +1,95 @@
+% LineEqualityProof.tex
+% This file contains the proof
+
+\begin{proofbox}
+Let \( L_1 = \{ t\bar{p} + (1 - t)\bar{q} : t \in \mathbb{R} \} \)  
+and \( L_2 = \{ s\bar{a} + (1 - s)\bar{b} : s \in \mathbb{R} \} \).  
+
+Assume that \( L_1 \) and \( L_2 \) intersect at two distinct points, say \( \bar{u} \) and \( \bar{v} \),  
+with \( \bar{u} \ne \bar{v} \). Let \( L \) be the line through \( \bar{u} \) and \( \bar{v} \).  
+
+We shall show that \( L_1 = L = L_2 \).  
+
+\vspace{1em}
+
+Since \( \bar{u}, \bar{v} \in L_1 \), there exist \( t_0, t_1 \in \mathbb{R} \) such that  
+\[
+\bar{u} = t_0\bar{p} + (1 - t_0)\bar{q}, \quad
+\bar{v} = t_1\bar{p} + (1 - t_1)\bar{q}.
+\]
+Since \( \bar{u} \ne \bar{v} \), it follows that \( t_0 \ne t_1 \).  
+
+\vspace{1em}
+
+Now consider a point
+\[
+\bar{x} = r(t_0\bar{p} + (1 - t_0)\bar{q}) + (1 - r)(t_1\bar{p} + (1 - t_1)\bar{q}).
+\]
+By the properties of vector addition and scalar multiplication,
+\begin{align*}
+\bar{x}
+&= \big( rt_0 + (1 - r)t_1 \big) \bar{p}
++ \big( r(1 - t_0) + (1 - r)(1 - t_1) \big) \bar{q} \\
+&= \big( rt_0 + t_1 - rt_1 \big) \bar{p}
++ \big( r - rt_0 + 1 - r - (1 - t_1) \big) \bar{q} \\
+&= \big( rt_0 + t_1 - rt_1 \big) \bar{p}
++ \big( 1 - (rt_0 + t_1 - rt_1) \big) \bar{q}.
+\end{align*}
+Hence \( \bar{x} \in L_1 \). But \( \bar{x} \) was a point on the line through \( \bar{u} \) and \( \bar{v} \),  
+so this shows every point on the line \( L \) lies in \( L_1 \).  
+
+\vspace{1em}
+
+Now, using the identities:
+\[
+\bar{u} = t_0\bar{p} + (1 - t_0)\bar{q}, \quad
+\bar{v} = t_1\bar{p} + (1 - t_1)\bar{q},
+\]
+we multiply both by \( t_1 \) and \( t_0 \), respectively:
+\begin{align*}
+t_1\bar{u} &= t_1t_0\bar{p} + t_1(1 - t_0)\bar{q} \tag{A} \\
+t_0\bar{v} &= t_0t_1\bar{p} + t_0(1 - t_1)\bar{q} \tag{B}
+\end{align*}
+
+
+\end{proofbox}
+\begin{proofbox}
+Subtracting (B) from (A):
+\begin{align*}
+t_1\bar{u} - t_0\bar{v}
+&= t_1(1 - t_0)\bar{q} - t_0(1 - t_1)\bar{q} \\
+&= \big( t_1 - t_0 \big)\bar{q} \\
+\Rightarrow \quad \bar{q} &= \frac{t_1\bar{u} - t_0\bar{v}}{t_1 - t_0}
+= \frac{t_0}{t_1 - t_0} \bar{u} - \frac{t_1}{t_1 - t_0} \bar{v} \tag{C}
+\end{align*}
+
+\vspace{1em}
+
+
+Likewise, observe:
+\begin{align*}
+\bar{u} - \bar{v}
+&= (t_0 - t_1)\bar{p} + (1 - t_0 - (1 - t_1))\bar{q} \\
+&= (t_0 - t_1)\bar{p} + (t_1 - t_0)\bar{q} \\
+&= (t_0 - t_1)(\bar{p} - \bar{q}) \\
+\Rightarrow \quad \bar{p}
+&= \frac{1 - t_0}{t_0 - t_1} \bar{u} - \frac{1 - t_1}{t_0 - t_1} \bar{v} \tag{D}
+\end{align*}
+    
+Now suppose that \( \bar{y} \in L_1 \). Then \( \bar{y} = t\bar{p} + (1 - t)\bar{q} \) for some \( t \in \mathbb{R} \).  
+Substitute from (C) and (D):
+\begin{align*}
+\bar{y}
+&= t\left( \frac{1 - t_0}{t_0 - t_1} \bar{u} - \frac{1 - t_1}{t_0 - t_1} \bar{v} \right)
++ (1 - t) \left( \frac{t_0}{t_1 - t_0} \bar{u} - \frac{t_1}{t_1 - t_0} \bar{v} \right) \\
+&= \left( \frac{t(1 - t_0)}{t_0 - t_1} + \frac{(1 - t)t_0}{t_0 - t_1} \right) \bar{u}
++ \left( -\frac{t(1 - t_1)}{t_0 - t_1} - \frac{(1 - t)t_1}{t_0 - t_1} \right) \bar{v} \\
+&= \frac{t - t_1}{t_0 - t_1} \bar{u}
++ \left( 1 - \frac{t - t_1}{t_0 - t_1} \right) \bar{v}.
+\end{align*}
+
+Thus \( \bar{y} \in L \). So every point on \( L_1 \) lies on \( L \), i.e., \( L_1 \subseteq L \).  
+By symmetry, the same argument shows \( L_2 \subseteq L \).  
+Hence, \( L_1 = L = L_2 \).  
+\hfill \( \qed \)
+\end{proofbox}

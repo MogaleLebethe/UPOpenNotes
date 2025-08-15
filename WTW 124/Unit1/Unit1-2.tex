@@ -1,0 +1,178 @@
+\subsection{A Mathematical Model for Space}
+
+
+In this section, we explore how the mathematical structure known as $\mathbb{R}^3$ serves as a model for 
+representing three-dimensional space. Our primary goal is to explain how vectors in $\mathbb{R}^3$ 
+(that is, ordered triples of real numbers) can be used to describe the location, or \textit{position}, 
+of points within a spatial environment. To illustrate this idea, consider once again a familiar physical setting: 
+a rectangular room.
+
+\vspace{1em}
+
+Now to determine the position of a point within this room, we typically measure its perpendicular distances from three fixed 
+reference surfaces: two adjacent, non-opposing walls, and the floor. These measurements, denoted $x_1$, $x_2$, and $x_3$, 
+effectively capture how far the point lies from each of these surfaces, and they can be expressed as a 
+vector $\bar{x} = \langle x_1, x_2, x_3 \rangle$, which resides in $\mathbb{R}^3$.
+
+\vspace{1em}
+
+However, it is important to recognise that this mathematical framework is a simplification, a kind of idealisation, of physical space. 
+While it allows for clear and consistent modelling of position, it abstracts away the complexities and imperfections of the real 
+world. For instance, the notion of assigning a precise position to a large object, such as a bed, within a small room, is problematic 
+under this model, because the object occupies a volume rather than a single point. Conversely, it is more appropriate to model the position
+of a small object like a mosquito using a point in $\mathbb{R}^3$, even though, in reality, the mosquito itself is not dimensionless. 
+Thus, while the mathematical use of vectors in $\mathbb{R}^3$ offers a powerful tool for analysing space, it operates only within the 
+boundaries of idealised assumptions.
+
+\subsubsection{The Model of Space}
+
+
+So let us now make precise our mathematical model for space. We assume that we know what
+ a \textit{point in space} is, what is meant by the \textit{distance between two points}, by \textit{direction} and
+ \textit{perpendicular}, and that the \textit{Theorem of Pythagoras} holds.
+
+\begin{definitionbox}
+\textbf{The Model of Space}
+
+Fix a point of reference in space, and three mutually perpendicular
+directions, labeled $x, y$ and $z$, respectively.
+\begin{enumerate}
+  \item Define the reference point in space as the zero vector $\bar{0}$ in $\mathbb{R}^3$.
+  
+  \item An algebraic vector $\bar{x} = \langle x_1, x_2, x_3 \rangle$ in $\mathbb{R}^3$ represents the point in space
+        reached by starting at $\bar{0}$ and then:
+        \begin{itemize}
+          \item moving a distance of $a$ units in the $x$-direction if $a \geq 0,$ or $|a|$ units in the opposite direction if $a < 0$;
+          \item followed by a movement of $b$ units in the $y$-direction if $b \geq 0,$ or $|b|$ units in the opposite direction if $b < 0$;
+          \item and finally, moving $c$ units in the $z$-direction if $c \geq 0,$ or $|c|$ units in the opposite direction if $c < 0$.
+        \end{itemize}
+\end{enumerate}
+\end{definitionbox}
+
+\tdplotsetmaincoords{65}{120}
+
+\begin{center}
+\begin{tikzpicture}[
+    scale=5, % Increased size
+    tdplot_main_coords,
+    axis/.style={->,blue,thick},
+    vector/.style={-stealth,red,very thick},
+    vector guide/.style={dashed,red,thick}
+]
+
+% Define origin
+\coordinate (O) at (0,0,0);
+
+% Define vector endpoint
+\pgfmathsetmacro{\ax}{1}
+\pgfmathsetmacro{\ay}{1}
+\pgfmathsetmacro{\az}{1}
+\coordinate (P) at (\ax,\ay,\az);
+
+% Axes
+\draw[axis] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+\draw[axis] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+\draw[axis] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+
+% Vector and guides
+\draw[vector] (O) -- (P);
+\draw[vector guide]         (O) -- (\ax,\ay,0);
+\draw[vector guide] (\ax,\ay,0) -- (P);
+\draw[vector guide]         (P) -- (0,0,\az);
+\draw[vector guide] (\ax,\ay,0) -- (0,\ay,0);
+\draw[vector guide] (\ax,\ay,0) -- (\ax,0,0);
+
+% Labels for projections
+\node[tdplot_main_coords,anchor=east]  at (\ax,0,0) {(\ax, 0, 0)};
+\node[tdplot_main_coords,anchor=west]  at (0,\ay,0) {(0, \ay, 0)};
+\node[tdplot_main_coords,anchor=south] at (0,0,\az) {(0, 0, \az)};
+
+\end{tikzpicture}
+\end{center}
+
+\begin{notebox}
+\begin{enumerate}
+    \item Since we identify algebraic vectors in $\mathbb{R}^3$ with points in three-dimensional space, we may refer to any algebraic vector $\bar{p} \in \mathbb{R}^3$ as a \textit{point in space}, or simply a \textit{point in} $\mathbb{R}^3$.
+
+    \item It follows from the Theorem of Pythagoras that the distance between the origin $\bar{0}$ and a point $\bar{p}$ is given by $\|\bar{p}\|$.
+
+    \item In general, the distance between two points $\bar{p}$ and $\bar{q}$ is $\|\bar{p} - \bar{q}\|$. Note that $\|\bar{p} - \bar{q}\| = \|\bar{q} - \bar{p}\|$.
+
+    \item When we use an algebraic vector to represent a point in space, we denote its components by lowercase Roman characters. For instance, we may write $\bar{p} = \langle a, b, c \rangle$ or $\bar{x} = \langle x, y, z \rangle$.
+
+    \vspace{0.5em}
+    For a point $\bar{p} = \langle a, b, c \rangle$ in space, we call the components of the vector $\bar{p}$ the \textit{Cartesian coordinates} of the point. Specifically, $a$ is the $x$-coordinate of $\bar{p}$, $b$ is the $y$-coordinate, and $c$ is the $z$-coordinate.
+\end{enumerate}
+\end{notebox}
+
+\begin{examplebox}
+  The distance between the points $\bar{p} = \langle 3, 2, -1 \rangle$ and $\bar{q} = \langle 1, 4, 0 \rangle$ is
+\[
+\|\bar{p} - \bar{q}\| = \|\langle 2, -2, -1 \rangle\| = \sqrt{2^2 + (-2)^2 + (-1)^2} = \sqrt{4 + 4 + 1} = \sqrt{9} = 3.
+\]
+\end{examplebox}
+
+Our everyday experience tells us that, given points $\bar{p}$, $\bar{q}$, and $\bar{r}$, the distance between $\bar{p}$ and $\bar{q}$ is strictly less than the sum of the distances between $\bar{p}$ and $\bar{r}$ and between $\bar{r}$ and $\bar{q}$, unless $\bar{r}$ lies \textit{between} $\bar{p}$ and $\bar{q}$. 
+
+If our model for space is to be meaningful and useful, it should be consistent with this intuitive observation. The following theorem partially addresses this issue.
+
+\begin{theorembox}
+\textbf{The Triangle Inequality for Points in Space}
+
+If $\bar{p}, \bar{q}, \bar{r} \in \mathbb{R}^3$, then
+\[
+\|\bar{p} - \bar{q}\| \leq \|\bar{p} - \bar{r}\| + \|\bar{r} - \bar{q}\|.
+\]
+\end{theorembox}
+
+\begin{proofbox}
+Assume $\bar{p}, \bar{q}, \bar{r} \in \mathbb{R}^3$.
+
+We want to show that $\|\bar{p} - \bar{q}\| \leq \|\bar{p} - \bar{r}\| + \|\bar{r} - \bar{q}\|$.
+
+\quad $||\bar{p} - \bar{q}|| = ||\bar{p} - \bar{r} + \bar{r} - \bar{q}||$ \hfill [Rearranging terms]
+
+\quad $\Rightarrow ||(\bar{p} - \bar{r}) + (\bar{r} - \bar{q})|| \leq \|\bar{p} - \bar{r}\| + \|\bar{r} - \bar{q}\|$ \hfill [By the Triangle Inequality for the Norm]
+
+\quad $\therefore ||\bar{p} - \bar{q}|| \leq \|\bar{p} - \bar{r}\| + \|\bar{r} - \bar{q}\|$.
+
+\hfill $\qed$
+
+\end{proofbox}
+
+\begin{examplebox}
+Let $\bar{p} = \langle 2, 0, 2 \rangle$, \quad
+$\bar{q} = \langle 0, 1, 0 \rangle$, \quad
+and $\bar{r} = \langle -2, 0, -2 \rangle$.
+
+\vspace{1em}
+
+Then $\|\bar{p} - \bar{q}\| = \|\langle 2, -1, 2 \rangle\| = \sqrt{4 + 1 + 4} = \sqrt{9} = 3$,
+
+\quad $\|\bar{p}\| = \sqrt{2^2 + 0^2 + 2^2} = \sqrt{8} = 2\sqrt{2}$,
+
+\quad and $\|\bar{q}\| = \sqrt{0^2 + 1^2 + 0^2} = \sqrt{1} = 1$.
+
+\vspace{1em}
+
+
+Hence, $\|\bar{p} - \bar{q}\| = 3 \quad < \quad 2\sqrt{2} + 1 = \|\bar{p}\| + \|\bar{q}\|$.
+
+\vspace{1em}
+
+On the other hand, $\|\bar{p} - \bar{r}\| = \|\langle 4, 0, 4 \rangle\| = \sqrt{16 + 0 + 16} = \sqrt{32} = 4\sqrt{2}$,  
+
+\quad and $\|\bar{p}\| = \|\bar{r}\| = \sqrt{4 + 0 + 4} = \sqrt{8} = 2\sqrt{2}$.
+
+\vspace{1em}
+
+Therefore, $\|\bar{p} - \bar{r}\| = \|\bar{p}\| + \|\bar{r}\|$,  
+\quad since $4\sqrt{2} = 2\sqrt{2} + 2\sqrt{2}$.
+
+\end{examplebox}
+
+\input{ExercisesUnit1-2.tex}
+
+In the next unit, we will use our model of space to define lines.
+
+\newpage

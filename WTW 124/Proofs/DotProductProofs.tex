@@ -1,0 +1,77 @@
+%DotProductProofs.tex
+% This file contains the proofs for the properties of the dot product.
+
+\begin{proofbox}
+\begin{enumerate}[label=\arabic*., series=vecprops]
+
+\item \textbf{Positive Definiteness}
+
+Assume $\bar{x} \in \mathbb{R}^n$.
+
+We shall first show that $\bar{x} \cdot \bar{x} \geq 0$.
+
+\quad $\bar{x} \cdot \bar{x} = (x_1)^2 + (x_2)^2 + \cdots + (x_n)^2$ \hfill [Def. of Dot Product]
+
+\quad $= \sum_{i=1}^n (x_i)^2$ \hfill [Summation Notation]
+
+\quad $\geq 0$ \hfill $[ \because(x_i)^2 \geq 0 \text{ for all } i \in \{1, 2, \ldots, n\}]$
+
+
+Now, we shall show that $\bar{x} \cdot \bar{x} = 0 \Leftrightarrow \bar{x} = \bar{0}$.
+
+Suppose $\bar{x} \cdot \bar{x} = 0$.
+
+\quad $\bar{x} \cdot \bar{x} = (x_1)^2 + (x_2)^2 + \cdots + (x_n)^2 = 0$ \hfill [Def. of Dot Product]
+
+\quad $\Rightarrow for\ all\ i \in \{1, 2, \ldots, n\},\ (x_i)^2 = 0$ \hfill [Each term must be zero]
+
+Now for contradiction, assume $\bar{x} \neq \bar{0}$.
+
+\quad $\Rightarrow \exists i \in \{1, 2, \ldots, n\} \text{ such that } x_i \neq 0$.
+
+\quad $\Rightarrow (x_i)^2 > 0$ \hfill [Square of a non-zero number is positive]
+
+\quad This contradicts $(x_i)^2 = 0$.
+
+\quad $\therefore \bar{x} = \bar{0}$.
+
+Conversely, if $\bar{x} = \bar{0}$, then:
+
+\quad $\bar{x} \cdot \bar{x} = 0^2 + 0^2 + \cdots + 0^2 = 0$ \hfill [Def. of Dot Product]
+
+\quad $\therefore \bar{x} \cdot \bar{x} = 0$.
+
+\hfill $\qed$
+
+\item \textbf{Commutativity of the Dot Product}
+
+Assume $\bar{x}, \bar{y} \in \mathbb{R}^n$.
+
+We want to show that $\bar{x} \cdot \bar{y} = \bar{y} \cdot \bar{x}$.
+
+\quad $\bar{x} \cdot \bar{y} = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n$ \hfill [Def. of Dot Product]
+
+\quad $= y_1 x_1 + y_2 x_2 + \cdots + y_n x_n$ \hfill [Commutativity of Real Numbers]
+
+\quad $= \bar{y} \cdot \bar{x}$ \hfill [Def. of Dot Product]
+
+\hfill $\qed$
+
+\item \textbf{Distributive Law of the Dot Product}
+
+Assume $\bar{x}, \bar{y}, \bar{z} \in \mathbb{R}^n$ and $a, b \in \mathbb{R}$.
+
+We want to show that $\bar{x} \cdot (a\bar{y} + b\bar{z}) = a(\bar{x} \cdot \bar{y}) + b(\bar{x} \cdot \bar{z})$.
+
+\quad $\bar{x} \cdot (a\bar{y} + b\bar{z}) = \bar{x} \cdot \langle ay_1 + bz_1, ay_2 + bz_2, \ldots, ay_n + bz_n \rangle$ \hfill [Def. of Vector Addition]
+
+\quad $= x_1(ay_1 + bz_1) + x_2(ay_2 + bz_2) + \cdots + x_n(ay_n + bz_n)$ \hfill [Def. of Dot Product]
+
+\quad $= a(x_1 y_1 + x_2 y_2 + \cdots + x_n y_n) + b(x_1 z_1 + x_2 z_2 + \cdots + x_n z_n)$ [Distributivity over $\mathbb{R}$]
+
+\quad $= a(\bar{x} \cdot \bar{y}) + b(\bar{x} \cdot \bar{z})$ \hfill [Def. of Dot Product]
+
+\hfill $\qed$
+
+\end{enumerate}
+\end{proofbox}

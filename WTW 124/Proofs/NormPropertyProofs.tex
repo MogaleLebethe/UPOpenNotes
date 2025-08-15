@@ -1,0 +1,99 @@
+%NormPropertyProofs.tex
+%This file contains the proofs of the properties of norms.
+
+\begin{proofbox}
+\begin{enumerate}[label=\arabic*., series=normprops]
+    \item \textbf{Positive Definiteness}
+    
+    Assume $\bar{x} \in \mathbb{R}^n$.
+
+    We shall first show that $\|\bar{x}\| \geq 0$.
+
+    \quad $\|\bar{x}\| = \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2}$ \hfill [Def. of Norm]
+
+    \quad $= \sqrt{\sum_{i=1}^n (x_i)^2}$ \hfill [Summation Notation]
+
+    \quad $\geq 0$ \hfill $[ \because (x_i)^2 \geq 0 \text{ for all } i \in \{1, 2, \ldots, n\}]$
+
+    Now, we shall show that $\|\bar{x}\| = 0 \Leftrightarrow \bar{x} = \bar{0}$.
+
+    Suppose $\|\bar{x}\| = 0$.
+
+    \quad $\|\bar{x}\| = \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2} = 0$ \hfill [Def. of Norm]
+
+    \quad $\Rightarrow x_1^2 + x_2^2 + \cdots + x_n^2 = 0$ \hfill [Square root is zero]
+
+    \quad $\Rightarrow (x_i)^2 = 0$ for all $i \in \{1, 2, \ldots, n\}$ \hfill [Each term must be zero]
+
+    Now for contradiction, assume $\bar{x} \neq \bar{0}$.
+
+    \quad $\Rightarrow \exists i \in \{1, 2, \ldots, n\} \text{ such that } x_i \neq 0$.
+
+    \quad $\Rightarrow (x_i)^2 > 0$ \hfill [Square of a non-zero number is positive]
+
+    \quad This contradicts $(x_i)^2 = 0$.
+
+    \quad $\therefore \bar{x} = \bar{0}$.
+
+    Conversely, if $\bar{x} = \bar{0}$, then:
+
+    \quad $\|\bar{x}\| = \sqrt{0^2 + 0^2 + \cdots + 0^2} = 0$ \hfill [Def. of Norm]
+
+    \quad $\therefore \|\bar{x}\| = 0$.
+
+    \hfill $\qed$
+
+    \item \textbf{Multiplicative Property}
+    
+    Assume $\bar{x} \in \mathbb{R}^n$ and $c \in \mathbb{R}$.
+
+    We want to show that $\|c \bar{x}\| = |c| \|\bar{x}\|$.
+
+    \quad $\|c \bar{x}\| = \sqrt{(c x_1)^2 + (c x_2)^2 + \cdots + (c x_n)^2}$ \hfill [Def. of Norm]
+
+    \quad $= \sqrt{c^2 (x_1^2 + x_2^2 + \cdots + x_n^2)}$ \hfill [Factoring out $c^2$]
+
+    \quad $= |c| \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2}$ \hfill [Square root of $c^2$ is $|c|$]
+
+    \quad $= |c| \|\bar{x}\|$ \hfill [Def. of Norm]
+
+    \hfill $\qed$
+
+    \item \textbf{Triangle Inequality}
+    
+    Assume $\bar{x}, \bar{y} \in \mathbb{R}^n$.
+
+    We want to show that $\|\bar{x} + \bar{y}\| \leq \|\bar{x}\| + \|\bar{y}\|$.
+
+    By the Cauchy-Schwarz inequality, we have:
+
+    \quad $\|\bar{x} + \bar{y}\|^2 = \sum_{i=1}^n (x_i + y_i)^2$ \hfill [Def. of Norm]
+
+    \quad $= \sum_{i=1}^n (x_i^2 + 2 x_i y_i + y_i^2)$ \hfill [Expanding the square]
+
+    \quad $= \sum_{i=1}^n x_i^2 + 2 \sum_{i=1}^n x_i y_i + \sum_{i=1}^n y_i^2$ \hfill [Distributing the summation]
+
+    \quad $= \|\bar{x}\|^2 + 2 \sum_{i=1}^n x_i y_i + \|\bar{y}\|^2$ \hfill [Def. of Norm]
+
+    By the Cauchy-Schwarz inequality, we know:
+
+    \quad $\left( \sum_{i=1}^n x_i y_i \right)^2 \leq \left( \sum_{i=1}^n x_i^2 \right) \left( \sum_{i=1}^n y_i^2 \right)$
+
+    \quad $\Rightarrow 2 \sum_{i=1}^n x_i y_i \leq 2 \sqrt{\left( \sum_{i=1}^n x_i^2 \right) \left( \sum_{i=1}^n y_i^2 \right)}$
+
+    \quad $\Rightarrow 2 \sum_{i=1}^n x_i y_i \leq 2 \|\bar{x}\| \|\bar{y}\|$ \hfill [Def. of Norm]
+
+    Thus, we have:
+
+    \quad $\|\bar{x} + \bar{y}\|^2 \leq \|\bar{x}\|^2 + 2 \|\bar{x}\| \|\bar{y}\| + \|\bar{y}\|^2$
+
+    \quad $= (\|\bar{x}\| + \|\bar{y}\|)^2$ \hfill [Factoring the right-hand side]
+
+    Taking the square root of both sides gives:
+
+    \quad $\|\bar{x} + \bar{y}\| \leq \|\bar{x}\| + \|\bar{y}\|$
+
+    \hfill $\qed$
+    
+\end{enumerate}
+\end{proofbox}

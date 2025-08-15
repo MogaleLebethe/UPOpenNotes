@@ -1,0 +1,30 @@
+%Image1.tex
+% This file is part of the WTW124 course material.
+
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Define the coordinates of the endpoints
+    \coordinate (R1_end) at (1, -1);
+    \coordinate (R2_end) at (-2, 2);
+
+    % Draw the arrowed line from R2 to R1
+    \draw[{Stealth[length=3mm, width=2mm]}-{Stealth[length=3mm, width=2mm]}, thick] (R2_end) -- (R1_end);
+
+
+    % Calculate and place points along the line using interpolation
+    \path let \p1 = (R2_end), \p2 = (R1_end) in
+        coordinate (r_point) at ($(\p1)!0.15!(\p2)$)
+        coordinate (q_point) at ($(\p1)!0.45!(\p2)$)
+        coordinate (p_point) at ($(\p1)!0.8!(\p2)$);
+
+    % Draw the points
+    \fill (r_point) circle (3pt) node[left=5pt] {$\bar{r}$};
+    \fill (q_point) circle (3pt) node[left=5pt] {$\bar{q}$};
+    \fill (p_point) circle (3pt) node[left=5pt] {$\bar{p}$};
+
+    % Label the endpoints
+    \node[below right] at (R1_end) {$R_1$};
+    \node[above left] at (R2_end) {$R_2$};
+\end{tikzpicture}
+\end{center}

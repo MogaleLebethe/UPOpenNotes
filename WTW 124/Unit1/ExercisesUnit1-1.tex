@@ -1,0 +1,103 @@
+% ExercisesUnit1-1.tex
+% This file contains exercises for Unit 1-1 of WTW124.
+
+\begin{exercisebox}
+\begin{enumerate}[label=\arabic*., series=exercises]
+
+\item Let $\bar{v} = \langle 3, -6, 7 \rangle$, $\bar{x} = \langle 2, 1, 2 \rangle$, $\bar{y} = \langle -1, 8, 1 \rangle$,\\ 
+$\bar{z} = \langle -2, 3, 0, 2 \rangle$, $\bar{w} = \langle 9, -2, 1, 1 \rangle$.
+
+Calculate each of the following algebraic vectors, if it is defined. If it is not defined, explain why.
+
+\begin{multicols}{3}
+\begin{enumerate}[label=(\alph*)]
+\item $5\bar{x} - 2\bar{y}$
+\item $\bar{v} + 6(\bar{y} - \bar{x})$
+\item $\bar{z} - 2(\bar{x} + \bar{y})$
+\item $2\bar{x} - 7(\bar{v} + 3\bar{y})$
+\item $2 + \bar{x}$
+\item $3\bar{z} - 2(\bar{w} + \bar{z})$
+\item $6(3\bar{x} + \bar{y} - 2\bar{v})$
+\item $7\bar{y} - 2\bar{x} + 3\bar{v}$
+\item $\bar{x} + (\bar{v} - \bar{w})$
+\item $\bar{x} + 0\bar{y} - 2\bar{v}$
+\end{enumerate}
+\end{multicols}
+
+
+\item Let $\bar{x} = \langle 1, \alpha, -2 \rangle$, $\bar{y} = \langle \beta, 1 - \beta, \alpha \rangle$, and $\bar{z} = \langle 1, 8, -1 \rangle$,\\
+where $\alpha$ and $\beta$ are real numbers. Find all values of $\alpha$ and $\beta$, if any, for which the following equations are true:
+\begin{multicols}{3}
+\begin{enumerate}[label=(\alph*)]
+\item $2\bar{x} + 3\bar{y} = \bar{z}$
+\item $\bar{x} - \bar{y} = \bar{0}$
+\item $\alpha \bar{x} + 2\bar{y} = \langle 7, -3, 0 \rangle$
+\end{enumerate}
+\end{multicols}
+
+\item If $\bar{a}$, $\bar{b}$ and $\bar{c}$ are algebraic vectors in $\mathbb{R}^n$, then $\bar{a}$ is a \textit{linear combination} of $\bar{b}$ and $\bar{c}$ if there exist real numbers $\alpha$ and $\beta$ such that:
+\[
+\bar{a} = \alpha \bar{b} + \beta \bar{c}.
+\]
+Let $\bar{b} = \langle -1, 2, 1 \rangle$ and $\bar{c} = \langle 1, 1, 1 \rangle$.
+
+Determine whether the following vectors are linear combinations of $\bar{b}$ and $\bar{c}$:
+\begin{multicols}{3}
+\begin{itemize}
+\item $\bar{p} = \langle 2, 5, 4 \rangle$
+\item $\bar{q} = \langle -4, 2, 0 \rangle$
+\item $\bar{r} = \langle 2, -4, -1 \rangle$
+\end{itemize}
+\end{multicols}
+
+\item Use properties of vectors to prove the following:
+
+If $\bar{x}, \bar{y}, \bar{z} \in \mathbb{R}^n$ such that $\bar{x} + \bar{z} = \bar{y} + \bar{z}$, then $\bar{x} = \bar{y}$.
+
+\item Prove that if $\bar{x}, \bar{y} \in \mathbb{R}^3$ and $\alpha \in \mathbb{R}$ with $\alpha \neq 0$ such that $\alpha \bar{x} = \alpha \bar{y}$, then $\bar{x} = \bar{y}$.
+
+\item Let $\bar{v} = \langle 3,-6,7 \rangle$, $\bar{x} = \langle 2,1,2 \rangle$, $\bar{y} = \langle -1,8,1 \rangle$, $\bar{z} = \langle -2,3,0,2 \rangle$, $\bar{w} = \langle 9,-2,1,1 \rangle$. \\
+Calculate the following, if possible. Otherwise, explain why it is not possible to evaluate the given expression.
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\alph*)]
+\item $\|\ 5\bar{x} - 2\bar{y} \|$
+\item $\bar{v} \cdot (\bar{y} - 2\bar{x})$
+\item $\|\ \bar{z} - \bar{x} + \bar{y} \|$
+\item $(\bar{w} - 2\bar{z}) \cdot (\bar{w} + 2\bar{z})$
+\item $\| \bar{x} \cdot \bar{y} \|$
+\item $(2\bar{v} - \bar{x} + 3\bar{y}) \cdot (\bar{x} - \bar{v})$
+\item $(\|\bar{x}\|\bar{y} - \|\bar{y}\|\bar{x}) \cdot (\|\bar{x}\|\bar{y} - \|\bar{y}\|\bar{x})$
+\item $\bar{x} \cdot (\bar{v} - \bar{y})$
+\item $(2\bar{x}) \cdot \bar{y} + \bar{v}$
+\item $\| 7\bar{y} - 2\bar{x} + 3\bar{v} \|$
+\end{enumerate}
+\end{multicols}
+
+\end{enumerate}
+\end{exercisebox}
+
+\newpage
+
+\begin{exercisebox}
+\begin{enumerate}[label=\arabic*., resume=exercises]
+    
+\item Let $\bar{x}$ and $\bar{y}$ be algebraic vectors in $\mathbb{R}^3$.
+\begin{enumerate}[label=(\alph*)]
+\item If $\bar{x} = \alpha \bar{y}$ for some $\alpha \in \mathbb{R}$, show that $|\bar{x} \cdot \bar{y}| = \|\bar{x}\|\|\bar{y}\|$.
+\item Now suppose $|\bar{x} \cdot \bar{y}| = \|\bar{x}\|\|\bar{y}\|$, and $\bar{y} \ne \bar{0}$. In the proof of the Cauchy–Schwarz inequality it is shown that:
+\[
+0 \le (\bar{x} - \alpha \bar{y}) \cdot (\bar{x} - \alpha \bar{y}) = \|\bar{x}\|^2 - \frac{(\bar{x} \cdot \bar{y})^2}{\|\bar{y}\|^2}
+\]
+for some real number $\alpha$. Use this fact to prove that $\bar{x} = \alpha \bar{y}$.
+\end{enumerate}
+
+\item Let $\bar{u}$ and $\bar{v}$ be algebraic vectors in $\mathbb{R}^3$. Prove the following:
+\begin{enumerate}[label=(\alph*)]
+\item $\|\bar{u} - \bar{v}\|^2 + \|\bar{u} + \bar{v}\|^2 = 2\|\bar{u}\|^2 + 2\|\bar{v}\|^2$.
+\item $\bar{u} \cdot \bar{v} = \frac{1}{4} \left( \|\bar{u} + \bar{v}\|^2 - \|\bar{u} - \bar{v}\|^2 \right)$.
+[Hint: Use the definition of the norm, and the properties of the dot product.]
+\end{enumerate}
+\end{enumerate}
+\end{exercisebox}
+

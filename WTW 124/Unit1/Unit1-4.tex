@@ -1,0 +1,516 @@
+\subsection{Angles and Measurement}
+
+Angles are common in the world around us: the side line and the goal line on a soccer pitch
+form an angle at the point where they intersect, as do non-opposing walls in a rectangular
+room. In this section we define angles in the context of our model for space, and introduce
+angle measure. As a motivation for our definitions of angle and the magnitude of an angle,
+we introduce triangles, and show that our definitions are consistent with the Cosine Law.
+
+\begin{definitionbox}
+\textbf{Angle}
+
+Let \(R_1\) and \(R_2\) be two rays \(R_1 = \{\bar{a} + t\bar{p} : t \geq 0\}\) and \(R_2 = \{\bar{a} + t\bar{q} : t \geq 0\}\) with the same
+origin \(\bar{a}\). The set \(R_1 \cup R_2\) of all points of all points on the two rays is called the \textbf{angle} formed by the rays \(R_1\) and \(R_2\).
+\end{definitionbox}
+
+The following figure shows the angle formed by the rays \(R_1\) and \(R_2\).
+
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate (R1) at (3, 3);
+        \coordinate (A) at (0, 0);
+        \coordinate (R2) at (4.5, 0);
+        \coordinate (MdptR1) at (1.5, 1.5);
+        \coordinate (MdptR2) at (2.25, 0);
+ 
+        
+        \draw[-{Stealth[length=3mm, width=2mm]}, thick] (A) -- (R1) node[above left] {$R_1$};
+        \draw[-{Stealth[length=3mm, width=2mm]}, thick] (A) -- (R2) node[above right] {$R_2$};
+        \fill (A) circle (2pt) node[below left] {$\bar{a}$};
+        \fill (MdptR1) circle (2pt) node[above left] {$\bar{a}+\bar{p}$};
+        \fill (MdptR2) circle (2pt) node[below right] {$\bar{a}+\bar{q}$};
+ 
+
+    \end{tikzpicture}
+\end{center}
+
+\begin{remarkbox}
+    Take note of the following regarding rays.
+
+    \begin{enumerate}
+        \item Consider two rays \(R_1 = \{\bar{a} + t\bar{p} : t \geq 0\}\) and \(R_2 = \{\bar{a} + t\bar{q} : t \geq 0\}\) with the same
+origin \(\bar{a}\). If the direction vectors \(\bar{p}\) and \(\bar{q}\) are scalar multiples of each other, then \(R_1 = R_2\), or \(R_1 \cup R_2\) is a line.
+
+        \item Let \(\bar{x}, \bar{y}, \bar{z}\) be three points not on the same line. Then the line segments \\
+            \(S_1 = \{\bar{x}+t(\bar{y}-\bar{x}) : 0 \leq t \leq 1\}\) and \(S_2 = \{\bar{x}+t(\bar{z}-\bar{x}) : 0 \leq t \leq 1\}\) determine the angle formed by the rays 
+            \(R_1 =\{\bar{x}+t(\bar{y}-\bar{x}): t \geq 0\}\) and \(R_2 =\{\bar{x}+t(\bar{z}-\bar{x}): t \geq 0\}\):
+        \begin{center}
+    \begin{tikzpicture}
+        \coordinate (R1) at (3, 3);
+        \coordinate (A) at (0, 0);
+        \coordinate (R2) at (4.5, 0);
+        \coordinate (MdptR1) at (1.5, 1.5);
+        \coordinate (MdptR2) at (2.25, 0);
+ 
+        
+        \draw[-{Stealth[length=3mm, width=2mm]}, thin] (A) -- (R1) node[above left] {$R_1$};
+        \draw[-{Stealth[length=3mm, width=2mm]}, thin] (A) -- (R2) node[above right] {$R_2$};
+        \draw[-, very thick] (A) -- (MdptR1);
+        \draw[-, very thick] (A) -- (MdptR2);
+        
+        \fill (A) circle (2pt) node[below left] {$\bar{x}$};
+        \fill (MdptR1) circle (2pt) node[above left] {$\bar{y}$};
+        \fill (MdptR2) circle (2pt) node[below right] {$\bar{z}$};
+ 
+
+    \end{tikzpicture}
+\end{center}  
+        
+    \end{enumerate}
+\end{remarkbox}
+
+\newpage
+
+Our aim now is to define the magnitude of an angle; that is, to measure the size of an angle, 
+because, in the figure below, the angle on the right is clearly `larger' than the one on the left.
+
+\begin{center}
+    
+    \begin{tikzpicture}
+    \coordinate (R1) at (1.5, 3);
+    \coordinate (A) at (0, 0);
+    \coordinate (R2) at (4.5, 0); 
+
+    \draw[-{Stealth[length=3mm, width=2mm]}, thick] (A) -- (R1) node[above left] {$R_1$};
+    \draw[-{Stealth[length=3mm, width=2mm]}, thick] (A) -- (R2) node[above right] {$R_2$};
+\end{tikzpicture}
+\begin{tikzpicture}
+    \coordinate (R1) at (4, 3);
+    \coordinate (A) at (0, 0);
+    \coordinate (R2) at (4.5, 0);
+
+    \draw[-{Stealth[length=3mm, width=2mm]}, thick] (A) -- (R1) node[above left] {$R_1$};
+    \draw[-{Stealth[length=3mm, width=2mm]}, thick] (A) -- (R2) node[above right] {$R_2$};
+
+\end{tikzpicture}
+
+\end{center}
+
+Now we need to quantify the what we refer to as the `size of an angle'.
+
+\vspace{1em}
+
+First note that for vectors \(\bar{x}, \bar{y}\), such that \(\bar{x},\bar{y} \neq 0\), by the Cauchy-Schwarz Inequality,
+\(|\bar{x}\cdot \bar{y}| \leq \|\bar{x}\| \|\bar{y}\| \).
+
+Then, by the Positive Definiteness of the Norm and the definition of the absolute value, we have
+
+\[
+    \bigg|\frac{\bar{x}\cdot \bar{y}}{\|\bar{x}\| \|\bar{y}\|}\bigg| \leq 1
+\]
+
+Finally, we find that:
+
+\[
+-1 \leq \frac{\bar{x}\cdot \bar{y}}{\|\bar{x}\| \|\bar{y}\|}\leq 1
+\]
+
+Now consider the function \(f : [0,\pi] \rightarrow \mathbb{R}\) defined by \(f(\theta)= \cos \theta\). Then \(f\) is continuous and strictly decreasing 
+on the interval \([0,\pi]\), with \(f(0) = 1\) and \(f(\pi) = -1\). By the Intermediate Value Theorem, and the fact that $f$ is strictly decreasing, there exists exactly one \( \theta \in [0,\pi] \) that satisfies 
+
+\[
+    f(\theta) = \cos \theta = \frac{\bar{x}\cdot \bar{y}}{\|\bar{x}\| \|\bar{y}\|}
+\]
+
+This leads to our definition of the magnitude of an angle:
+
+\begin{definitionbox}
+\textbf{Magnitude of an Angle}
+
+Consider the angle formed by the rays with equations \(\bar{x} = \bar{a} + t\bar{p}\) and \(\bar{x} = \bar{a} + t\bar{q}\), with \(t \geq 0\).
+Then the \textit{magnitude of the angle} is the unique real number \(\theta \in [0,\pi]\) such that
+
+\[
+    \cos \theta = \frac{\bar{p}\cdot \bar{q}}{\|\bar{p}\| \|\bar{q}\|}
+\]
+\end{definitionbox}
+
+\begin{remarkbox}
+    Consider the angle formed by the rays \(R_1\) and \(R_2\) with equations \(\bar{x} = \bar{a} + t\bar{p}\) and \(\bar{x} = \bar{a} + t\bar{q}\), with \(t \geq 0\), respectively.
+    Let \(\theta\) be the magnitude of the angle. Then
+
+    \[
+        |\bar{p}\cdot\bar{q}| = \| \bar{p}\|\cdot \| \bar{q}\| \text{ if and only if } \bar{p} \text{ and } \bar{q} \text{ are scalar multiples of each other.}
+    \]
+
+    In particular, 
+    \(
+        \bar{p}\cdot\bar{q} = \| \bar{p}\|\| \bar{q}\| \text{ if and only if } \bar{p} = \alpha\bar{q} \text{ for some } \alpha > 0,
+    \)
+
+    and 
+    \(
+        \bar{p}\cdot\bar{q} = -\| \bar{p}\|\| \bar{q}\| \text{ if and only if } \bar{p} = \alpha\bar{q} \text{ for some } \alpha < 0.
+    \)
+
+    We therefore have the following:
+    \begin{enumerate}
+        \item If \(\bar{p}\) and \(\bar{q}\) are not scalar multiples of each other, then \(\theta \in (0,\pi)\).
+        \item If \(\bar{p} = \alpha\bar{q}\) for some \(\alpha > 0\), then \(\theta = 0\). In this case, \(R_1=R_2\), so the angle \(R_1 \cup R_2\) is a ray.
+        \item If \(\bar{p} = \alpha\bar{q}\) for some \(\alpha < 0\), then \(\theta = \pi\). In this case, \(R_1 \cup R_2\) is a line.
+    \end{enumerate}
+
+\end{remarkbox}
+
+\begin{examplebox}
+Consider the rays \( R_1 \) and \( R_2 \) with equations
+\(
+\bar{x} = \bar{0} + t\langle 1, -1, 1 \rangle \text{ and } \bar{x} = \bar{0} + t\langle 2\alpha, 1, 1 \rangle, t \geq 0,
+\)
+respectively. Find all values for \( \alpha \in \mathbb{R} \) so that the angle formed by \( R_1 \) and \( R_2 \) has magnitude \( \frac{\pi}{3} \).
+
+\vspace{0.5em}
+\textbf{Solution}
+
+\vspace{0.5em}
+The direction vector for \( R_1 \) is \( \bar{p} = \langle 1, -1, 1 \rangle \), while that for \( R_2 \) is \( \bar{q} = \langle 2\alpha, 1, 1 \rangle \).
+
+The magnitude of the angle formed by these two rays is \( \frac{\pi}{3} \) if and only if
+
+
+\[
+\cos\left(\frac{\pi}{3}\right) = \frac{\bar{p} \cdot \bar{q}}{\|\bar{p}\| \|\bar{q}\|} = \frac{2\alpha - 1 + 1}{\sqrt{3} \sqrt{4\alpha^2 + 2}} = \frac{2\alpha}{\sqrt{3} \sqrt{4\alpha^2 + 2}}.
+\]
+
+
+Since \( \cos\left(\frac{\pi}{3}\right) = \frac{1}{2} \), we equate:
+
+
+\[
+\frac{1}{2} = \frac{2\alpha}{\sqrt{3} \sqrt{4\alpha^2 + 2}}.
+\]
+
+
+Multiplying both sides by \( 2\sqrt{3} \sqrt{4\alpha^2 + 2} \), we get:
+
+
+\[
+\sqrt{3} \sqrt{4\alpha^2 + 2} = 4\alpha.
+\]
+
+
+Squaring both sides:
+
+
+\[
+3(4\alpha^2 + 2) = 16\alpha^2 \quad \Rightarrow \quad 12\alpha^2 + 6 = 16\alpha^2 \quad \Rightarrow \quad 4\alpha^2 = 6 \quad \Rightarrow \quad \alpha^2 = \frac{3}{2}.
+\]
+
+
+Thus, \( \alpha = \pm \frac{\sqrt{6}}{2} \). However, we must check which of these satisfy the original equation.
+
+Substituting \( \alpha = \frac{\sqrt{6}}{2} \) into the original equation confirms it satisfies the condition. But \( \alpha = -\frac{\sqrt{6}}{2} \) does not, because the cosine would be negative, implying an angle greater than \( \frac{\pi}{2} \).
+
+Therefore, the only value for \( \alpha \) for which the angle formed by the rays \( R_1 \) and \( R_2 \) is \( \frac{\pi}{3} \) is
+\(
+\alpha = \frac{\sqrt{6}}{2}.
+\)
+
+\end{examplebox}
+
+\newpage
+
+Now that we have defined angles and lines in terms of our model of space, we can define a triangle. 
+
+\begin{definitionbox}
+\textbf{Triangle}
+
+    Let \(\bar{a}, \bar{b}, \bar{c} \in \mathbb{R}^3,\) not all on the same line. Let \(S_1\) be 
+    the line segment between \(\bar{a}\) and \(\bar{b}\), \(S_2\) be the line segment between
+    \(\bar{b}\) and \(\bar{c}\), and \(S_3\) be the line segment between \(\bar{a}\) and \(\bar{c}\).
+    Then the \textit{triangle} with vertices \(\bar{a}\), \( \bar{b}\), and \( \bar{c}\) is the set \(S_1 \cup S_2 \cup S_3\) 
+    of points on the three line segments.
+\end{definitionbox}
+
+The figure below illustrates a triangle, as defined above:
+
+ 
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        \coordinate (A) at (-2,0);
+        \coordinate (B) at (6,0);
+        \coordinate (C) at (2,4);
+        \coordinate (S1) at (0,2);
+        \coordinate (S2) at (3,2);
+        \coordinate (S3) at (0,0);
+
+        
+        \draw[very thick] (A) -- (B) node[midway, below] {};
+        \draw[very thick] (B) -- (C) node[midway, right] {};
+        \draw[very thick] (C) -- (A) node[midway, left] {};
+        \fill (A) circle (2pt) node[below left] {$\bar{a}$};
+        \fill (B) circle (2pt) node[below right] {$\bar{b}$};
+        \fill (C) circle (2pt) node[above left] {$\bar{c}$};
+
+        \node at ($(A)!0.5!(C)$) [left] {$S_1$};
+        \node at ($(A)!0.5!(B)$) [below] {$S_3$};
+        \node at ($(B)!0.5!(C)$) [right] {$S_2$};
+        
+    \end{tikzpicture}
+\end{center}
+
+\begin{remarkbox}
+    Consider three points \(\bar{a}, \bar{b}, \bar{c} \in \mathbb{R}^3\), not on the same line, and the
+    triangle with vertices \(\bar{a}\), \(\bar{b}\), and \(\bar{c}\).
+
+    \begin{enumerate}
+        \item The line segments \(S_1, S_2,\) and \(S_3\), joining \(\bar{a}, \bar{b},\) and \(\bar{c}\) respectively,
+        are called the \textit{sides} of the triangle.
+        
+        \item The triangle determines three angles:
+        \begin{enumerate}[label=(\alph*)]
+            \item The angle at \(\bar{a}\), formed by the rays with equations 
+            \(\bar{x} = \bar{a} + t(\bar{b} - \bar{a})\) and \(\bar{x} = \bar{a} + t(\bar{c} - \bar{a})\), 
+            where \(t \geq 0\).
+            
+            \item The angle at \(\bar{b}\), formed by the rays with equations 
+            \(\bar{x} = \bar{b} + t(\bar{a} - \bar{b})\) and \(\bar{x} = \bar{b} + t(\bar{c} - \bar{b})\), 
+            where \(t \geq 0\).
+            
+            \item The angle at \(\bar{c}\), formed by the rays with equations 
+            \(\bar{x} = \bar{c} + t(\bar{a} - \bar{c})\) and \(\bar{x} = \bar{c} + t(\bar{b} - \bar{c})\), 
+            where \(t \geq 0\).
+            The triangle with vertices \(\bar{a}\), \(\bar{b}\), and \(\bar{c}\) and the three angles
+            determined by the triangle are illustrated below:
+            \begin{center}
+\begin{multicols}{3}
+% Angle at a
+\begin{tikzpicture}[scale=0.5]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,3);
+    \coordinate (C) at (4,0);
+
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+
+    \fill (A) circle (2pt) node[below left] {$\bar{a}$};
+    \fill (B) circle (2pt) node[above] {$\bar{b}$};
+    \fill (C) circle (2pt) node[below right] {$\bar{c}$};
+
+    \draw[->, thick, color=blue] (A) -- ($(A)!0.5!(B)$);
+    \draw[->, thick, color=blue] (A) -- ($(A)!0.5!(C)$);
+
+    \node[below=5pt] at (2,-0.5) {\small Angle at $\bar{a}$};
+\end{tikzpicture}
+
+% Angle at b
+\begin{tikzpicture}[scale=0.5]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,3);
+    \coordinate (C) at (4,0);
+
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+
+    \fill (A) circle (2pt) node[below left] {$\bar{a}$};
+    \fill (B) circle (2pt) node[above] {$\bar{b}$};
+    \fill (C) circle (2pt) node[below right] {$\bar{c}$};
+
+    \draw[->, thick, color=red] (B) -- ($(B)!0.5!(A)$);
+    \draw[->, thick, color=red] (B) -- ($(B)!0.5!(C)$);
+
+    \node[below=5pt] at (2,-0.5) {\small Angle at $\bar{b}$};
+\end{tikzpicture}
+
+% Angle at c
+\begin{tikzpicture}[scale=0.5]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,3);
+    \coordinate (C) at (4,0);
+
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+
+    \fill (A) circle (2pt) node[below left] {$\bar{a}$};
+    \fill (B) circle (2pt) node[above] {$\bar{b}$};
+    \fill (C) circle (2pt) node[below right] {$\bar{c}$};
+
+    \draw[->, thick, color=green!70!black] (C) -- ($(C)!0.5!(A)$);
+    \draw[->, thick, color=green!70!black] (C) -- ($(C)!0.5!(B)$);
+
+    \node[below=5pt] at (2,-0.5) {\small Angle at $\bar{c}$};
+\end{tikzpicture}
+\end{multicols}
+            \end{center}
+        \end{enumerate}
+    \end{enumerate}
+\end{remarkbox}
+
+\newpage
+
+Our definition of the magnitude of an angle is consistent with the Cosine Rule.
+
+\begin{propositionbox}
+    \textbf{Cosine Rule}
+
+    Consider a triangle with vertices \(\bar{a}\), \(\bar{b}\), and \(\bar{c}\). Let \(\theta\) be the magnitude of the angle at \(\bar{b}\). 
+    \begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        \coordinate (A) at (-2,0);
+        \coordinate (B) at (6,0);
+        \coordinate (C) at (2,4);
+        \coordinate (S1) at (0,2);
+        \coordinate (S2) at (3,2);
+        \coordinate (S3) at (0,0);
+
+        
+        \draw[very thick] (A) -- (B) node[midway, below] {};
+        \draw[very thick] (B) -- (C) node[midway, right] {};
+        \draw[very thick] (C) -- (A) node[midway, left] {};
+        \fill (A) circle (2pt) node[below left] {$\bar{a}$};
+        \fill (B) circle (2pt) node[below right] {$\bar{b}$};
+        \fill (C) circle (2pt) node[above left] {$\bar{c}$};
+
+        \node at ($(A)!0.5!(C)$) [left] {$S_1$};
+        \node at ($(A)!0.5!(B)$) [below] {$S_3$};
+        \node at ($(B)!0.5!(C)$) [right] {$S_2$};
+        
+    \end{tikzpicture}
+\end{center}
+
+    Then we have that
+    
+    \[
+        \|\bar{a}-\bar{c}\|^2 = \|\bar{a}-\bar{b}\|^2 + \|\bar{b}-\bar{c}\|^2 - 2\|\bar{a}-\bar{b}\| \|\bar{b}-\bar{c}\| \cos \theta.
+    \]    
+\end{propositionbox}
+
+\begin{proofbox}
+    Calculating the square of the length of the side \(S_3\) we have:
+    \[
+\begin{aligned}
+\|\bar{a} - \bar{c}\|^2 
+&= \|(\bar{a} - \bar{b}) - (\bar{c} - \bar{b})\|^2 \\
+&= \left[(\bar{a} - \bar{b}) - (\bar{c} - \bar{b})\right] \cdot \left[(\bar{a} - \bar{b}) - (\bar{c} - \bar{b})\right] \\
+&= (\bar{a} - \bar{b}) \cdot (\bar{a} - \bar{b}) 
+   - 2\left[(\bar{a} - \bar{b}) \cdot (\bar{c} - \bar{b})\right] 
+   + (\bar{c} - \bar{b}) \cdot (\bar{c} - \bar{b}) \\
+&= \|\bar{a} - \bar{b}\|^2 
+   - 2\left[(\bar{a} - \bar{b}) \cdot (\bar{c} - \bar{b})\right] 
+   + \|\bar{c} - \bar{b}\|^2
+\end{aligned}
+\]
+
+Note that the angle at \( \bar{b} \) is determined by the rays with equations
+\[
+\bar{x} = \bar{b} + t(\bar{a} - \bar{b}) \quad \text{and} \quad \bar{x} = \bar{b} + t(\bar{c} - \bar{b}), \quad t \geq 0.
+\]
+Therefore, calculating the magnitude \( \theta \) of the angle at \( \bar{b} \), we find
+\[
+\cos\theta = \frac{(\bar{a} - \bar{b}) \cdot (\bar{c} - \bar{b})}{\|\bar{a} - \bar{b}\| \, \|\bar{c} - \bar{b}\|}.
+\]
+Hence,
+\[
+\|\bar{a} - \bar{c}\|^2 = \|\bar{a} - \bar{b}\|^2 + \|\bar{c} - \bar{b}\|^2 - 2\|\bar{a} - \bar{b}\| \, \|\bar{c} - \bar{b}\| \cos\theta.
+\]
+\end{proofbox}
+\begin{examplebox}
+Consider the triangle with vertices $\bar{a} = \langle 1,0,1 \rangle$, $\bar{b} = \langle 1,2,1 \rangle$, and $\bar{c} = \langle 1,2,3 \rangle$. We determine the magnitude of the angle at $\bar{a}$.
+
+\vspace{0.5em}
+\textbf{Solution.} Let $\theta$ be the magnitude of the angle at $\bar{a}$. According to the cosine rule,
+\[
+\|\bar{b} - \bar{c}\|^2 = \|\bar{b} - \bar{a}\|^2 + \|\bar{c} - \bar{a}\|^2 - 2\|\bar{b} - \bar{a}\|\|\bar{c} - \bar{a}\|\cos\theta.
+\]
+Hence,
+\[
+4 = 4 + 8 - 8\sqrt{2}\cos\theta \quad \Rightarrow \quad \cos\theta = \frac{1}{\sqrt{2}}.
+\]
+Therefore, $\theta = \frac{\pi}{4}$.
+\end{examplebox}
+
+\begin{examplebox}
+Consider the triangle with vertices $\bar{a} = \langle 1,0,1 \rangle$, $\bar{b} = \langle 1,2,1 \rangle$, and $\bar{c} = \langle \alpha,1,0 \rangle$. We find the values for $\alpha$ so that the angle at $\bar{a}$ has magnitude $\frac{\pi}{3}$.
+
+\vspace{0.5em}
+\textbf{Solution.} According to the cosine rule,
+\[
+\|\bar{b} - \bar{c}\|^2 = \|\bar{b} - \bar{a}\|^2 + \|\bar{c} - \bar{a}\|^2 - 2\|\bar{b} - \bar{a}\|\|\bar{c} - \bar{a}\|\cos\left(\frac{\pi}{3}\right).
+\]
+We have:
+\[
+\|\bar{b} - \bar{a}\| = 2, \quad \|\bar{c} - \bar{a}\| = \sqrt{(\alpha - 1)^2 + 2}, \quad \|\bar{b} - \bar{c}\| = \sqrt{(\alpha - 1)^2 + 2}.
+\]
+Substituting:
+\[
+(\alpha - 1)^2 + 2 = 4 + (\alpha - 1)^2 + 2 - 2 \cdot 2 \cdot \sqrt{(\alpha - 1)^2 + 2} \cdot \frac{1}{2}.
+\]
+Simplifying:
+\[
+(\alpha - 1)^2 + 2 = 6 + (\alpha - 1)^2 + 2 - 2\sqrt{(\alpha - 1)^2 + 2},
+\]
+\[
+2\sqrt{(\alpha - 1)^2 + 2} = 6 \quad \Rightarrow \quad \sqrt{(\alpha - 1)^2+2}=3 \quad \Rightarrow \quad (\alpha - 1)^2 = 7.
+\]
+Hence, $\alpha = 1 \pm \sqrt{7}$.
+\end{examplebox}
+
+\begin{examplebox}
+Consider the triangle with vertices $\bar{a} = \langle 1,-1,1 \rangle$, $\bar{b} = \langle 2,1,1 \rangle$, and $\bar{c} = \langle -2\alpha - 1, \alpha, 6 \rangle$. We find the values for $\alpha$ so that the angle at $\bar{b}$ has magnitude $\frac{\pi}{4}$.
+
+\vspace{0.5em}
+\textbf{Solution.} Using the cosine rule:
+\[
+\|\bar{a} - \bar{c}\|^2 = \|\bar{a} - \bar{b}\|^2 + \|\bar{c} - \bar{b}\|^2 - 2\|\bar{a} - \bar{b}\|\|\bar{c} - \bar{b}\|\cos\left(\frac{\pi}{4}\right).
+\]
+We compute:
+\[
+\|\bar{a} - \bar{b}\| = \sqrt{5}, \quad \|\bar{a} - \bar{c}\| = \sqrt{5\alpha^2 + 10\alpha + 30}, \quad \|\bar{c} - \bar{b}\| = \sqrt{5\alpha^2 + 10\alpha + 35}.
+\]
+Substituting:
+\[
+5\alpha^2 + 10\alpha + 30 = 5 + 5\alpha^2 + 10\alpha + 35 - 2\sqrt{5}\sqrt{5\alpha^2+10\alpha+35}\cos\left(\frac{\pi}{4}\right)
+\]
+\[
+5\alpha^2 + 10\alpha + 30 = 5\alpha^2 + 10\alpha + 40 - 2\sqrt{5}\sqrt{5\alpha^2+10\alpha+35}\frac{1}{\sqrt{2}}
+\]
+\[
+-10 = -\sqrt{10}\sqrt{5\alpha^2+10\alpha+35} \quad \Rightarrow \quad 10 = \sqrt{10}\sqrt{5\alpha^2+10\alpha+35}
+\]
+\[
+100 = 10(5\alpha^2+10\alpha+35) \quad \Rightarrow \quad 10=5\alpha^2+10\alpha+35 \quad \Rightarrow \quad 5\alpha^2+10\alpha+25 = 0
+\]
+\[
+\alpha^2+2\alpha+5=0.
+\]
+Since the discriminant is negative, there are no real solutions. Therefore, no value of $\alpha$ gives an angle of $\frac{\pi}{4}$ at $\bar{b}$.
+\end{examplebox}
+
+\begin{examplebox}
+Consider a triangle with vertices $\bar{a}$, $\bar{b}$, and $\bar{c}$ such that $\|\bar{a} - \bar{b}\| = 3$, $\|\bar{c} - \bar{a}\| = 4$, and the angle at $\bar{b}$ has magnitude $\frac{\pi}{6}$. We determine $\|\bar{b} - \bar{c}\|$.
+
+\vspace{0.5em}
+\textbf{Solution.} By the cosine rule:
+\[
+\|\bar{a} - \bar{c}\|^2 = \|\bar{c} - \bar{b}\|^2 + \|\bar{a} - \bar{b}\|^2 - 2\|\bar{a} - \bar{b}\|\|\bar{c} - \bar{b}\|\cos\left(\frac{\pi}{6}\right).
+\]
+Substituting:
+\[
+16 = 9 + \|\bar{b} - \bar{c}\|^2 - 2(3)\|\bar{b} - \bar{c}\|\left(\frac{\sqrt{3}}{2}\right).
+\]
+\[
+16 = 9 + \|\bar{b} - \bar{c}\|^2 - 3\sqrt{3}\|\bar{b} - \bar{c}\|.
+\]
+Let $x = \|\bar{b} - \bar{c}\|$. Then:
+\[
+x^2 - 3\sqrt{3}x - 7 = 0.
+\]
+Solving using the quadratic formula:
+\[
+x = \frac{3\sqrt{3} \pm \sqrt{(3\sqrt{3})^2 - 4(1)(-7)}}{2} = \frac{3\sqrt{3} \pm \sqrt{27+28}}{2} = \frac{3\sqrt{3} \pm \sqrt{55}}{2}.
+\]
+Since $x$ must be a positive length, we take the positive root. Therefore:
+\[
+\|\bar{b} - \bar{c}\| = \frac{3\sqrt{3} + \sqrt{55}}{2}.
+\]
+\end{examplebox}
+\input{ExercisesUnit1-4.tex}
+
+\newpage

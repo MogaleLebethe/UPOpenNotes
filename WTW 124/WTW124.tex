@@ -1,0 +1,77 @@
+%WTW124.tex
+% This file is part of the WTW124 course material.
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usetikzlibrary{arrows.meta}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+
+
+\setlength{\parindent}{0pt}
+
+
+
+% Custom environments
+\newtcolorbox{definitionbox}{colback=green!10!white,colframe=green!50!black,title=Definition}
+\newtcolorbox{remarkbox}{colback=red!5!white,colframe=red!75!black,title=Remark}
+\newtcolorbox{examplebox}{colback=blue!5!white,colframe=blue!75!black,title=Example}
+\newtcolorbox{theorembox}{colback=orange!10!white,colframe=orange!80!black,title=Theorem}
+\newtcolorbox{proofbox}{colback=yellow!10!white,colframe=yellow!80!black,title=Proof}
+\newtcolorbox{notebox}{colback=gray!10!white,colframe=black,title=Take Note!}
+\newtcolorbox{exercisebox}{colback=purple!10!white,colframe=purple!80!black,title=Exercises}
+\newtcolorbox{propositionbox}{colback=cyan!10!white,colframe=cyan!80!black,title=Proposition}
+
+
+\begin{document}
+
+\input{Title.tex}
+
+\section{Vectors and a Model for Space}
+
+
+\textbf{Introduction}
+\\
+Imagine you're standing in a rectangular room. To describe the exact position of any point in the room, say, 
+where a fly is hovering, we can use three numbers. These numbers form an ordered triple:
+
+\[
+\langle x_1, x_2, x_3 \rangle
+\]
+\begin{itemize}
+\item $x_1$ is the distance from one wall,
+\item $x_2$ is the distance from the opposite wall (not the same one as $x_1$),
+\item $x_3$ is how high the point is from the floor.
+\end{itemize}
+
+
+These values give us a simple way to describe positions in 3D space using real numbers. 
+This forms the basis of vectors in $\mathbb{R}^3$.
+\begin{center}
+  \includegraphics[width=0.7\textwidth]{Vector.png}
+\end{center}
+
+
+
+\newpage
+
+\input{Unit1-1.tex}
+\input{Unit1-2.tex}
+\input{Unit1-3.tex}
+\input{Unit1-4.tex}
+\input{Unit1-5.tex}
+\end{document}

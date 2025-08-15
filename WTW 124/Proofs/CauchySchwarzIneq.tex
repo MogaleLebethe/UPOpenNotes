@@ -1,0 +1,61 @@
+%CauchySchwarzIneq.tex
+% This file contains the proof of the Cauchy-Schwarz Inequality.
+
+\begin{proofbox}
+\begingroup
+\setlength{\baselineskip}{1.5\baselineskip} 
+
+Assume $\bar{x}, \bar{y} \in \mathbb{R}^n$.
+
+We want to show that $|\bar{x} \cdot \bar{y}| \leq \|\bar{x}\| \cdot \|\bar{y}\|$.
+
+\textbf{Case 1: Either $\bar{x} = \bar{0}$ or $\bar{y} = \bar{0}$.}
+
+\quad Without loss of generality, assume $\bar{y} = \bar{0}$.
+
+\quad Then $\|\bar{y}\| = \sqrt{\bar{y} \cdot \bar{y}} = \sqrt{0} = 0$ \hfill [Def. of Norm of a Vector].
+
+\quad And $|\bar{x} \cdot \bar{y}| = |\sum_{i=1}^n (x_i \cdot 0)| = 0$ \hfill [Def. of Dot Product].
+
+\quad $\therefore |\bar{x} \cdot \bar{y}| = 0 = \|\bar{y}\|$.
+
+\quad This implies $|\bar{x} \cdot \bar{y}| = \|\bar{x}\| \|\bar{y}\|$.
+
+\quad Furthermore, since $\|\bar{y}\| = 0$, we have $|\bar{x} \cdot \bar{y}| \leq \|\bar{x}\| \|\bar{y}\|$.
+
+\textbf{Case 2: $\bar{y} \neq \bar{0}$.}
+
+\quad $||\bar{y}||^2 = \bar{y} \cdot \bar{y} > 0$. \hfill [Def. of Norm of a Vector]
+
+\quad $\Rightarrow \exists a \in \mathbb{R}$ such that $a = \frac{\bar{x} \cdot \bar{y}}{\|\bar{y}\|^2}$.
+
+\quad Now consider $(\bar{x} - a \bar{y}) \cdot (\bar{x} - a \bar{y})$.
+
+\quad By the properties of the dot product, we have:
+
+\quad $(\bar{x} - a \bar{y}) \cdot (\bar{x} - a \bar{y}) = \bar{x} \cdot \bar{x} - 2a(\bar{x} \cdot \bar{y}) + a^2(\bar{y} \cdot \bar{y})$.
+
+\quad $= ||\bar{x}||^2 - 2a(\bar{x} \cdot \bar{y}) + a^2 ||\bar{y}||^2$.
+
+\quad $= ||\bar{x}||^2 - 2 \frac{(\bar{x} \cdot \bar{y})^2}{||\bar{y}||^2} + \frac{(\bar{x} \cdot \bar{y})^2}{||\bar{y}||^2}$ \hfill [Substituting $a$].
+
+\quad $= ||\bar{x}||^2 - \frac{(\bar{x} \cdot \bar{y})^2}{||\bar{y}||^2}$. \hfill [Combining terms].
+
+Since the dot product is positive definite, we know that 
+
+\quad $(\bar{x} - a\bar{y}) \cdot (\bar{x} - a\bar{y}) \geq 0$.
+
+\quad Therefore:
+
+\quad $||\bar{x}||^2 - \frac{(\bar{x} \cdot \bar{y})^2}{||\bar{y}||^2} \geq 0$
+
+\quad $\Rightarrow ||\bar{x}||^2 \cdot ||\bar{y}||^2 \geq (\bar{x} \cdot \bar{y})^2$
+
+\quad $\Rightarrow ||\bar{x}|| \cdot ||\bar{y}|| \geq |\bar{x} \cdot \bar{y}|$
+
+\quad Thus, the Cauchy-Schwarz inequality holds in this case as well.
+
+\hfill \qed
+
+\endgroup
+\end{proofbox}

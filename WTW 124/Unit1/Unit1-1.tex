@@ -1,0 +1,571 @@
+\subsection{Algebraic Vectors and Vector Algebra}
+
+\subsubsection{Algebraic Vectors}
+
+
+In this section, we formalise the ideas presented in the introduction.
+At this point our definitions and theorems are purely mathematical, and have no connection
+with the physical world.
+
+\begin{definitionbox}
+\textbf{Algebraic Vectors}
+
+Let $n$ be any number in $\mathbb{N}$. An algebraic vector with $n$ components is an ordered set:
+\[
+\bar{x} = \langle x_1, x_2, ..., x_n \rangle, \quad \text{where } x_i \in \mathbb{R}
+\]
+These numbers are called the \textit{components} of $\bar{x}$.
+\end{definitionbox}
+
+\begin{definitionbox}
+\textbf{Notation}
+
+The set of all vectors with $n$ real-number components is denoted by $\mathbb{R}^n$.
+\end{definitionbox}
+
+\begin{examplebox}
+\begin{itemize}
+\item $\bar{x} = \langle 1, 2, -3 \rangle \in \mathbb{R}^3$
+\item $\bar{y} = \langle -2, 0.7, 1.1, 0.2 \rangle \in \mathbb{R}^4$
+\item $\bar{z} = \langle -1, 2, 3, -3 \rangle \in \mathbb{R}^4$
+\end{itemize}
+\end{examplebox}
+
+\begin{definitionbox}
+\textbf{Vector Equality}
+
+Two vectors $\bar{x} = \langle x_1, x_2, ..., x_n \rangle$ and $\bar{y} = \langle y_1, y_2, ..., y_n \rangle$ are equal if and only if:
+\[
+x_1 = y_1, \quad x_2 = y_2, \quad ..., \quad x_n = y_n
+\]
+\end{definitionbox}
+
+\begin{remarkbox}
+Vectors are \textbf{ordered sets}. They are only equal if they have the same number of components and each corresponding component is equal.
+\end{remarkbox}
+
+\begin{examplebox}
+The vectors $\bar{x} = \langle 1, 2, -3 \rangle$ and $\bar{y} = \langle 1, -3, 2 \rangle$ in $\mathbb{R}^3$ are not equal, since $x_3 = -3 \neq 2 = y_3$.
+
+Also, let $\bar{w} \in \mathbb{R}^4$. Then the algebraic vectors $\bar{z} = \langle 1, 1, 1 \rangle$ and $\bar{w} = \langle 1, 1, 1, 1 \rangle$ are not equal, since $\bar{z} \in \mathbb{R}^3$ and $\bar{w} \in \mathbb{R}^4$.
+
+\end{examplebox}
+
+\newpage
+
+% Section 2
+\subsubsection{Algebraic Vector Operations}
+
+
+The set $\mathbb{R}^n$ is equipped with algebraic operations in a natural way.
+We can add vectors, multiply them by scalars, and subtract them.
+These operations are defined as follows:
+\begin{definitionbox}
+\textbf{Vector Addition}
+
+If $\bar{x}, \bar{y} \in \mathbb{R}^n$, then:
+\[
+\bar{x} + \bar{y} = \langle x_1 + y_1, x_2 + y_2, ..., x_n + y_n \rangle
+\]
+\end{definitionbox}
+
+\begin{definitionbox}
+\textbf{Scalar Vector Multiplication}
+
+If $c \in \mathbb{R}$ and $\bar{x} \in \mathbb{R}^n$, then:
+\[
+c\bar{x} = \langle cx_1, cx_2, ..., cx_n \rangle
+\]
+\end{definitionbox}
+
+\begin{notebox}
+\textbf{Terminology...}
+
+Some textbooks say that this is not the same as scalar \textit{product}, which refers 
+to the dot product of two vectors. 
+For our purposes we shall refer to the above definition as scalar vector \textit{multiplication}.
+\end{notebox}
+
+\begin{definitionbox}
+\textbf{Zero Vector}
+
+The \textit{zero vector} in $\mathbb{R}^n$ is:
+\[
+\bar{0} = \langle 0, 0, ..., 0 \rangle
+\]
+\end{definitionbox}
+
+\begin{definitionbox}
+\textbf{Additive Inverse of a Vector}
+
+For $\bar{x} \in \mathbb{R}^n$, the additive inverse is:
+\[
+-\bar{x} = \langle -x_1, -x_2, ..., -x_n \rangle
+\]
+\end{definitionbox}
+
+\begin{definitionbox}
+\textbf{Vector Subtraction}
+
+If $\bar{x}, \bar{y} \in \mathbb{R}^n$, then:
+\[
+\bar{x} - \bar{y} = \bar{x} + (-\bar{y})
+\]
+\end{definitionbox}
+
+\begin{examplebox}
+  Let $\bar{x} = \langle 2, 3, 9 \rangle$, $\bar{y} = \langle -2, 4, 1 \rangle$, $\bar{z} = \langle 2, 5, 1, 4 \rangle$ and $\bar{w} = \langle -4, 0, 2, -1 \rangle$.
+
+\noindent Then:
+\[
+\bar{x} + \bar{y} = \langle 2, 3, 9 \rangle + \langle -2, 4, 1 \rangle 
+= \langle 2 - 2, 3 + 4, 9 + 1 \rangle 
+= \langle 0, 7, 10 \rangle,
+\]
+\[
+\bar{z} + \bar{w} = \langle 2, 5, 1, 4 \rangle + \langle -4, 0, 2, -1 \rangle 
+= \langle 2 - 4, 5 + 0, 1 + 2, 4 - 1 \rangle 
+= \langle -2, 5, 3, 3 \rangle,
+\]
+\[
+\text{and} \quad 7\bar{x} = 7 \langle 2, 3, 9 \rangle 
+= \langle 7 \times 2, 7 \times 3, 7 \times 9 \rangle 
+= \langle 14, 21, 63 \rangle.
+\]
+
+\noindent Note that $\bar{z} + \bar{w}$ is not defined, since $\bar{z} \in \mathbb{R}^4$ and $\bar{w} \in \mathbb{R}^3$.
+\end{examplebox}
+
+Vectors can be added, subtracted, and multiplied by scalars in a way that is 
+consistent with the properties of real numbers.
+We can summarise these properties in the following theorem:
+\begin{theorembox}
+\textbf{Properties of Vectors}
+
+If $\bar{x}, \bar{y}, \bar{z} \in \mathbb{R}^n$ and $a, b \in \mathbb{R}$, then the following hold:
+\begin{enumerate}
+\item $\bar{x} + \bar{y} = \bar{y} + \bar{x}$ \hfill [Commutativity of Vector Addition]
+\item $\bar{x} + (\bar{y} + \bar{z}) = (\bar{x} + \bar{y}) + \bar{z}$ \hfill [Associativity of Vector Addition]
+\item $\bar{x} + \bar{0} = \bar{x}$ \hfill [Additive Identity of Vectors]
+\item $\bar{x} + (-\bar{x}) = \bar{0}$ \hfill [Additive Inverse of a Vector]
+\item $a(b\bar{x}) = (ab)\bar{x}$ \hfill [Associativity of Scalar Multiplication]
+\item $1\bar{x} = \bar{x}$ \hfill [Multiplicative Identity]
+\item $(-1)\bar{x} = -\bar{x}$ \hfill [Multiplication by $-1$]
+\item $0\bar{x} = \bar{0}$ \hfill [Multiplication by a Zero Scalar]
+\item $a\bar{0} = \bar{0}$ \hfill [Multiplying a Zero Vector]
+\item $a(\bar{x} + \bar{y}) = a\bar{x} + a\bar{y}$ \hfill [Distributivity over Vector Addition]
+\item $(a + b)\bar{x} = a\bar{x} + b\bar{x}$ \hfill [Distributivity over Scalar Addition]
+\end{enumerate}
+\end{theorembox}
+
+\input{VectorPropertiesProofs.tex}
+
+\begin{examplebox}
+Let $\bar{x} = \langle -2, 3, 1 \rangle$, $\bar{y} = \langle 7, 0, 5 \rangle$, and $\bar{z} = \langle 4, 1, 8 \rangle$.
+
+\vspace{1em}
+
+Calculate $5(\bar{x} + 2\bar{y})$ and $\bar{x} - 3(\bar{x} + \bar{z})$
+
+\vspace{1em}
+
+\noindent\textbf{Solution.}
+\begin{align*}
+5(\bar{x} + 2\bar{y}) 
+&= 5\bar{x} + 5(2\bar{y}) && \text{[Distributivity over vector addition]} \\
+&= 5\bar{x} + 10\bar{y} \\
+&= \langle -10, 15, 5 \rangle + \langle 70, 0, 50 \rangle && \text{[Definition of scalar multiplication]} \\
+&= \langle 60, 15, 55 \rangle && \text{[Definition of vector addition]}
+\end{align*}
+
+\begin{align*}
+\bar{x} - 3(\bar{x} + \bar{z}) 
+&= \bar{x} - (3\bar{x} + 3\bar{z}) && \text{[Distributivity over vector addition]} \\
+&= (\bar{x} - 3\bar{x}) - 3\bar{z} && \text{[Associativity of vector addition]} \\
+&= -2\bar{x} - 3\bar{z} \\
+&= \langle 4, -6, -2 \rangle + \langle -12, -3, -24 \rangle && \text{[Definition of scalar multiplication]} \\
+&= \langle -8, -9, -26 \rangle && \text{[Definition of vector addition]}
+\end{align*}
+\end{examplebox}
+
+
+In addition to the properties above, we can also define the \textbf{dot product} of two vectors, 
+which is a way to multiply vectors that results in a scalar (real number).
+\begin{definitionbox}
+\textbf{Dot Product of Two Vectors}
+
+Let $\bar{x} = \langle x_1, x_2, ..., x_n \rangle$ and $\bar{y} = \langle y_1, y_2, ..., y_n \rangle$ in $\mathbb{R}^n$. Then:
+\[
+\bar{x} \cdot \bar{y} = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n
+\]
+\end{definitionbox}
+
+\begin{remarkbox}
+The dot product is only defined when $\bar{x}$ and $\bar{y}$ have the same number of components.
+\end{remarkbox}
+
+\begin{notebox}
+Be careful: the scalar multiple of a vector is still a vector, but the dot product gives a real number.
+\end{notebox}
+
+\begin{examplebox}
+Let $\bar{x} = \langle 2, 3, 9 \rangle$, $\bar{y} = \langle -2, 4, 1 \rangle$, $\bar{z} = \langle 2, 5, 1, 4 \rangle$, and $\bar{w} = \langle -4, 0, 2, -1 \rangle$.
+
+\noindent Then
+\[
+\bar{x} \cdot \bar{y} 
+= 2 \times (-2) + 3 \times 4 + 9 \times 1 
+= -4 + 12 + 9 
+= 17,
+\]
+and
+\[
+\bar{z} \cdot \bar{w} 
+= 2 \times (-4) + 5 \times 0 + 1 \times 2 + 4 \times (-1) 
+= -8 + 0 + 2 - 4 
+= -10.
+\]
+
+\noindent Note that $\bar{x} \cdot \bar{z}$ is undefined, since $\bar{x} \in \mathbb{R}^3$ and $\bar{z} \in \mathbb{R}^4$.
+\end{examplebox}
+
+\begin{examplebox}
+  \textbf{Scenario:}
+
+Marti Stair is playing a game where he controls a drone moving in 3-dimensional space. At one moment, the drone's velocity vector is
+\[
+\bar{v} = \langle 3, -1, 4 \rangle,
+\]
+and the wind's velocity vector affecting the drone is
+\[
+\bar{w} = \langle 2, 5, -3 \rangle.
+\]
+
+Marti wants to find out how much of the drone's velocity is aligned with the wind's velocity by computing the dot product \(\bar{v} \cdot \bar{w}\).
+
+\[
+\bar{v} \cdot \bar{w} = (3)(2) + (-1)(5) + (4)(-3) = 6 - 5 - 12 = -11.
+\]
+
+Since the dot product \(\bar{v} \cdot \bar{w} = -11\) is negative, Marti concludes that the drone's velocity is generally moving against the direction of the wind's velocity vector; the wind is slowing the drone down in some directions.
+
+\end{examplebox}
+The dot product has its own properties that make it useful in various applications, such as physics and computer graphics.
+We can use it to find angles between vectors, project one vector onto another, and more.
+\begin{theorembox}
+\textbf{Properties of the Dot Product}
+
+If $\bar{x}, \bar{y}, \bar{z} \in \mathbb{R}^n$, and $a, b \in \mathbb{R}$ then the following hold:
+\begin{enumerate}
+\item \textbf{Positive Definiteness:}
+\begin{itemize}
+\item $\bar{x} \cdot \bar{x} \geq 0$
+\item $\bar{x} \cdot \bar{x} = 0 \Leftrightarrow \bar{x} = \bar{0}$
+\end{itemize}
+\item \textbf{Commutativity of the Dot Product:} $\bar{x} \cdot \bar{y} = \bar{y} \cdot \bar{x}$
+\item \textbf{Distributivity of the Dot Product:} $\bar{x} \cdot (a\bar{y} + b\bar{z}) = a(\bar{x} \cdot \bar{y}) + b(\bar{x} \cdot \bar{z})$
+\end{enumerate}
+\end{theorembox}
+
+\input{DotProductProofs.tex}
+
+\begin{examplebox}
+Let $\bar{x} = \langle -2,3,1 \rangle$, $\bar{y} = \langle 7,0,5 \rangle$, and $\bar{z} = \langle 4,1,8 \rangle$. We calculate
+$\bar{x} \cdot (2\bar{y} - \bar{z})$ and $(\bar{x} + \bar{y}) \cdot (\bar{x} + 2\bar{z})$.
+
+\smallskip
+
+\quad $\bar{x} \cdot (2\bar{y} - \bar{z})$ 
+
+\quad $= 2(\bar{x} \cdot \bar{y}) - (\bar{x} \cdot \bar{z})$ \hfill [Distributivity over Vector Addition]
+
+\quad $= 2((-2)(7) + 3(0) + 1(5)) - ((-2)(4) + 3(1) + 1(8))$ \hfill [Definition of Dot Product]
+
+\quad $= 2(-14 + 0 + 5) - (-8 + 3 + 8)$ \hfill [Simplify]
+
+\quad $= 2(-9) - 3 = -18 - 3 = -21$.
+
+\vspace{1em}
+
+\quad $(\bar{x} + \bar{y}) \cdot (\bar{x} + 2\bar{z})$
+
+\quad $= (\bar{x} + \bar{y}) \cdot \bar{x} + 2((\bar{x} + \bar{y}) \cdot \bar{z})$ \hfill [Distributivity over Vector Addition] 
+
+\quad $= \bar{x} \cdot (\bar{x} + \bar{y}) + 2(\bar{z} \cdot (\bar{x} + \bar{y}))$ \hfill [Commutativity of Vector Addition]
+
+\quad $= \bar{x} \cdot \bar{x} + \bar{x} \cdot \bar{y} + 2(\bar{z} \cdot \bar{x}) + 2(\bar{z} \cdot \bar{y})$ \hfill [Distributivity of Dot Product]
+
+\quad $=14 - 9 + 6 + 136 = 147$.
+
+\end{examplebox}
+
+With these properties, we can also define the \textbf{norm} of a vector, 
+which is a measure of its length or magnitude.
+\begin{definitionbox}
+\textbf{Norm of a Vector}
+
+The norm of a vector $\bar{x} = \langle x_1, x_2, ..., x_n \rangle$ is:
+\[
+\|\bar{x}\| = \sqrt{\bar{x} \cdot \bar{x}} = \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2}
+\]
+\end{definitionbox}
+
+\begin{notebox}
+\begin{enumerate}
+\item By the dot product properties, the norm $\|\bar{x}\|$ is well-defined for every $\bar{x} \in \mathbb{R}^n$.
+\item If a vector $\bar{u}$ in $\mathbb{R}^n$ has $\|\bar{u}\| = 1$, then it's a \textbf{unit vector}.
+\end{enumerate}
+
+In $\mathbb{R}^3$, the standard unit vectors are:
+\[
+\bar{i} = \langle 1, 0, 0 \rangle, \quad \bar{j} = \langle 0, 1, 0 \rangle, \quad \bar{k} = \langle 0, 0, 1 \rangle
+\]
+The set $\{\bar{i}, \bar{j}, \bar{k}\}$ is the \textbf{standard basis} for $\mathbb{R}^3$. 
+Any vector $\bar{x} = \langle x_1, x_2, x_3 \rangle$ can be written as:
+\[
+\bar{x} = x_1 \bar{i} + x_2 \bar{j} + x_3 \bar{k}
+\]
+
+Think of it like a set of coordinate translation factors!
+\end{notebox}
+
+\begin{examplebox}
+  Let $\bar{x} = \langle 1,2,-3 \rangle$, $\bar{y} = \langle -2,0,7 \rangle$, and $\bar{z} = \langle -1,2,3,-3 \rangle$. Then
+
+\quad $\|\bar{x}\| = \sqrt{\bar{x} \cdot \bar{x}} = \sqrt{1^2 + 2^2 + (-3)^2} = \sqrt{1 + 4 + 9} = \sqrt{14}$
+
+\quad $\|\bar{y}\| = \sqrt{\bar{y} \cdot \bar{y}} = \sqrt{(-2)^2 + 0^2 + 7^2} = \sqrt{4 + 0 + 49} = \sqrt{53}$
+
+\quad $\|\bar{z}\| = \sqrt{\bar{z} \cdot \bar{z}} = \sqrt{(-1)^2 + 2^2 + 3^2 + (-3)^2} = \sqrt{1 + 4 + 9 + 9} = \sqrt{23}$
+
+\end{examplebox}
+
+One of the most important properties of the norm of an algebraic vector, in relation to the
+dot product, is the following result, known as the Cauchy-Schwarz Inequality.
+
+\begin{theorembox}
+\textbf{Cauchy-Schwarz Inequality}
+
+If $\bar{x}, \bar{y} \in \mathbb{R}^n$, then:
+
+\[
+|\bar{x} \cdot \bar{y}| \leq \|\bar{x}\| \|\bar{y}\|
+\]
+\end{theorembox}
+
+\input{CauchySchwarzIneq.tex}
+
+
+Let $\bar{x}$ and $\bar{y}$ be algebraic vectors in $\mathbb{R}^n$. 
+According to the Cauchy-Schwarz Inequality,
+
+$|\bar{x} \cdot \bar{y}| \leq \|\bar{x}\|\|\bar{y}\|$.
+
+This inequality includes two possibilities; namely,
+$|\bar{x} \cdot \bar{y}| < \|\bar{x}\|\|\bar{y}\|$ or $|\bar{x} \cdot \bar{y}| = \|\bar{x}\|\|\bar{y}\|$.
+
+In applications, it is important to know when equality holds in the Cauchy-Schwarz 
+
+Inequality; that is, when $|\bar{x} \cdot \bar{y}| = \|\bar{x}\|\|\bar{y}\|$. 
+We can thus make the following claim:
+\begin{propositionbox}
+ $|\bar{x} \cdot \bar{y}| = \|\bar{x}\|\|\bar{y}\|$ if and only if $\bar{y} = a\bar{x}$ or $\bar{x} = a\bar{y}$ for some $a \in \mathbb{R}$.
+ 
+\end{propositionbox}
+
+\begin{proofbox}
+First, assume that \( |\bar{x} \cdot \bar{y}| = \|\bar{x}\| \|\bar{y}\| \).  
+We want to show that \( \bar{x} = \alpha \bar{y} \) for some \( \alpha \in \mathbb{R} \), or \( \bar{x} = \bar{0} \).
+
+If \( \bar{y} = \bar{0} \), then both sides of the equation equal zero, and the equality holds trivially.
+
+Suppose \( \bar{y} \neq \bar{0} \). Then \( \|\bar{y}\| > 0 \), and we define the real number
+\[
+\alpha = \frac{\bar{x} \cdot \bar{y}}{\|\bar{y}\|^2}.
+\]
+Then,
+\[
+\bar{x} \cdot \bar{y} = \alpha \|\bar{y}\|^2.
+\]
+Taking absolute values:
+\[
+|\bar{x} \cdot \bar{y}| = |\alpha| \|\bar{y}\|^2.
+\]
+But by assumption,
+\[
+|\bar{x} \cdot \bar{y}| = \|\bar{x}\| \|\bar{y}\| \Rightarrow |\alpha| \|\bar{y}\|^2 = \|\bar{x}\| \|\bar{y}\|.
+\]
+Divide both sides by \( \|\bar{y}\| \) (since it's nonzero):
+\[
+|\alpha| \|\bar{y}\| = \|\bar{x}\|.
+\]
+Now square both sides:
+\[
+\alpha^2 \|\bar{y}\|^2 = \|\bar{x}\|^2.
+\]
+But also,
+\[
+\|\bar{x}\|^2 = \bar{x} \cdot \bar{x}, \quad \text{and} \quad \alpha^2 \|\bar{y}\|^2 = (\alpha \bar{y}) \cdot (\alpha \bar{y}).
+\]
+
+Hence,
+\(
+\bar{x} \cdot \bar{x} = (\alpha \bar{y}) \cdot (\alpha \bar{y}) \Rightarrow \|\bar{x} - \alpha \bar{y}\|^2 = 0,
+\)
+which implies that \(
+\bar{x} = \alpha \bar{y}.
+\)
+\vspace{1em}
+
+Now assume that \( \bar{x} = \alpha \bar{y} \) for some \( \alpha \in \mathbb{R} \), and \( \bar{y} \neq \bar{0} \). We want to show that
+\(
+|\bar{x} \cdot \bar{y}| = \|\bar{x}\| \|\bar{y}\|.
+\)
+
+We compute:
+\(
+|\bar{x} \cdot \bar{y}| = |\alpha \bar{y} \cdot \bar{y}| = |\alpha| |\bar{y} \cdot \bar{y}| = |\alpha| \|\bar{y}\|^2.
+\)
+
+Also,
+\(
+\|\bar{x}\| = \|\alpha \bar{y}\| = |\alpha| \|\bar{y}\| \Rightarrow \|\bar{x}\| \|\bar{y}\| = |\alpha| \|\bar{y}\|^2.
+\)
+
+Therefore,
+\(
+|\bar{x} \cdot \bar{y}| = \|\bar{x}\| \|\bar{y}\|.
+\)
+
+\hfill $\qed$
+
+\end{proofbox}
+
+Using the properties of the dot product and the Cauchy-Schwarz Inequality, we can obtain properties of the norm of a vector.
+
+\begin{theorembox}
+
+\textbf{Properties of the Norm of a Vector}
+
+If $\bar{x}, \bar{y} \in \mathbb{R}^n$, and $a \in \mathbb{R}$ then the following hold:
+
+\begin{enumerate}
+
+\item $\|\bar{x}\| \geq 0$, and $\|\bar{x}\| = 0 \Leftrightarrow \bar{x} = \bar{0}$ \hfill [Positive Definiteness]
+\item $\|a\bar{x}\| = |a|\|\bar{x}\|$ \hfill [Multiplicative Property]
+\item $\|\bar{x} + \bar{y}\| \leq \|\bar{x}\| + \|\bar{y}\|$ \hfill [Triangle Inequality]
+
+\end{enumerate}
+\end{theorembox}
+
+
+\begin{proofbox}
+\begin{enumerate}[label=\arabic*., series=normprops]
+    \item \textbf{Positive Definiteness}
+    
+    Assume $\bar{x} \in \mathbb{R}^n$. We shall first show that $\|\bar{x}\| \geq 0$.
+
+    \quad $\|\bar{x}\| = \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2}$ \hfill [Def. of Norm]
+
+    \quad $= \sqrt{\sum_{i=1}^n (x_i)^2}$ \hfill [Summation Notation]
+
+    \quad $\geq 0$ \hfill $[ \because (x_i)^2 \geq 0 \text{ for all } i \in \{1, 2, \ldots, n\}]$
+
+    Now, we shall show that $\|\bar{x}\| = 0 \Leftrightarrow \bar{x} = \bar{0}$.
+    Suppose $\|\bar{x}\| = 0$.
+
+    \quad $\|\bar{x}\| = \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2} = 0$ \hfill [Def. of Norm]
+
+    \quad $\Rightarrow x_1^2 + x_2^2 + \cdots + x_n^2 = 0$ \hfill [Square root is zero]
+
+    \quad $\Rightarrow (x_i)^2 = 0$ for all $i \in \{1, 2, \ldots, n\}$ \hfill [Each term must be zero]
+
+    Now for contradiction, assume $\bar{x} \neq \bar{0}$.
+
+    \quad $\Rightarrow \exists i \in \{1, 2, \ldots, n\} \text{ such that } x_i \neq 0$.
+
+    \quad $\Rightarrow (x_i)^2 > 0$ \hfill [Square of a non-zero number is positive]
+
+    \quad This contradicts $(x_i)^2 = 0$.
+
+    \quad $\therefore \bar{x} = \bar{0}$.
+
+    Conversely, if $\bar{x} = \bar{0}$, then:
+
+    \quad $\|\bar{x}\| = \sqrt{0^2 + 0^2 + \cdots + 0^2} = 0$ \hfill [Def. of Norm]
+
+    \quad $\therefore \|\bar{x}\| = 0$.
+
+    \hfill $\qed$
+\end{enumerate}
+
+\end{proofbox}
+
+\newpage
+
+\begin{proofbox}
+\begin{enumerate}[label=\arabic*., resume=normprops]
+
+
+\item \textbf{Multiplicative Property}
+    
+    Assume $\bar{x} \in \mathbb{R}^n$ and $c \in \mathbb{R}$.
+
+    We want to show that $\|c \bar{x}\| = |c| \|\bar{x}\|$.
+
+    \quad $\|c \bar{x}\| = \sqrt{(c x_1)^2 + (c x_2)^2 + \cdots + (c x_n)^2}$ \hfill [Def. of Norm]
+
+    \quad $= \sqrt{c^2 (x_1^2 + x_2^2 + \cdots + x_n^2)}$ \hfill [Factoring out $c^2$]
+
+    \quad $= |c| \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2}$ \hfill [Square root of $c^2$ is $|c|$]
+
+    \quad $= |c| \|\bar{x}\|$ \hfill [Def. of Norm]
+
+    \hfill $\qed$
+
+    \item \textbf{Triangle Inequality}
+    
+    Assume $\bar{x}, \bar{y} \in \mathbb{R}^n$.
+
+    We want to show that $\|\bar{x} + \bar{y}\| \leq \|\bar{x}\| + \|\bar{y}\|$.
+
+    By the Cauchy-Schwarz inequality, we have:
+
+    \quad $\|\bar{x} + \bar{y}\|^2 = \sum_{i=1}^n (x_i + y_i)^2$ \hfill [Def. of Norm]
+
+    \quad $= \sum_{i=1}^n (x_i^2 + 2 x_i y_i + y_i^2)$ \hfill [Expanding the square]
+
+    \quad $= \sum_{i=1}^n x_i^2 + 2 \sum_{i=1}^n x_i y_i + \sum_{i=1}^n y_i^2$ \hfill [Distributing the summation]
+
+    \quad $= \|\bar{x}\|^2 + 2 \sum_{i=1}^n x_i y_i + \|\bar{y}\|^2$ \hfill [Def. of Norm]
+
+    By the Cauchy-Schwarz inequality, we know:
+
+    \quad $\left( \sum_{i=1}^n x_i y_i \right)^2 \leq \left( \sum_{i=1}^n x_i^2 \right) \left( \sum_{i=1}^n y_i^2 \right)$
+
+    \quad $\Rightarrow 2 \sum_{i=1}^n x_i y_i \leq 2 \sqrt{\left( \sum_{i=1}^n x_i^2 \right) \left( \sum_{i=1}^n y_i^2 \right)}$
+
+    \quad $\Rightarrow 2 \sum_{i=1}^n x_i y_i \leq 2 \|\bar{x}\| \|\bar{y}\|$ \hfill [Def. of Norm]
+
+    Thus, we have:
+
+    \quad $\|\bar{x} + \bar{y}\|^2 \leq \|\bar{x}\|^2 + 2 \|\bar{x}\| \|\bar{y}\| + \|\bar{y}\|^2$
+
+    \quad $= (\|\bar{x}\| + \|\bar{y}\|)^2$ \hfill [Factoring the right-hand side]
+
+    Taking the square root of both sides gives:
+
+    \quad $\|\bar{x} + \bar{y}\| \leq \|\bar{x}\| + \|\bar{y}\|$
+
+    \hfill $\qed$
+    
+\end{enumerate}
+\end{proofbox}
+
+Now that we have established the basic properties of algebraic vectors in $\mathbb{R}^n$, we can apply these concepts to model
+three-dimensional space using the algebraic structure of $\mathbb{R}^3$.
+
+\input{ExercisesUnit1-1.tex}
+
+\newpage
+  

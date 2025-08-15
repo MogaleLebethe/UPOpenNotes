@@ -1,0 +1,39 @@
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+
+  % Define endpoints
+  \coordinate (R1) at (2.5, -2.5);
+  \coordinate (Q)  at (0, 0);
+
+  % Draw the line with arrow from q to R1
+  \draw[-{Stealth[length=3mm, width=2mm]}, thick] (Q) -- (R1);
+
+  % Point p in between q and R1
+  \path let \p1 = (Q), \p2 = (R1) in
+    coordinate (P) at ($(\p1)!0.6!(\p2)$);
+
+  % Mark points
+  \fill (Q) circle (2pt) node[left=5pt] {$\bar{q}$};
+  \fill (P) circle (2pt) node[left=5pt] {$\bar{p}$};
+  \node[below right] at (R1) {$R_1$};
+
+  % Coordinates for where to place equation labels
+  \path let \p1 = (Q), \p2 = (P) in
+    coordinate (Eq1) at ($(\p1)!0.35!(\p2)$);
+
+  \path let \p1 = (P), \p2 = (R1) in
+    coordinate (Eq2) at ($(\p1)!0.5!(\p2)$);
+
+  % Draw closed dots at the equation positions
+  \fill (Eq1) circle (2pt);
+  \fill (Eq2) circle (2pt);
+
+  % Add equations
+  \node[right=10pt] at (Eq1) 
+    {$\bar{x} = \bar{q} + t(\bar{p} - \bar{q}),\ 0 < t < 1$};
+
+  \node[right=10pt] at (Eq2) 
+    {$\bar{x} = \bar{q} + t(\bar{p} - \bar{q}),\ t > 1$};
+
+\end{tikzpicture}
+\end{center}
