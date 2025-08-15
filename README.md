@@ -1,8 +1,8 @@
-# WTW124 – Course Notes
+# UPOpenNotes
 
-This repository contains LaTeX source files, figures, and supplementary material for **WTW124**, a mathematics module at the University of Pretoria.
+This repository contains LaTeX source files, figures, and supplementary material for various modules at the University of Pretoria.
 
-The aim of this repository is to provide students with a well-organized, version-controlled space for sharing course notes, worked examples, and proofs. All materials are contributed and maintained by students to assist with learning and revision.
+The aim of this repository is to provide students with a well-organized, version-controlled space for sharing course notes, worked examples, and proofs across different subjects. All materials are contributed and maintained by students to assist with learning and revision.
 
 ---
 
