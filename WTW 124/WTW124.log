@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.16)  16 AUG 2025 11:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.16)  16 AUG 2025 11:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -875,7 +875,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 56
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<figures/Vector.png, id=105, 227.34938pt x 231.11343pt>
+<figures/Vector.png, id=104, 227.34938pt x 231.11343pt>
 File: figures/Vector.png Graphic file (type png)
 <use figures/Vector.png>
 Package pdftex.def Info: figures/Vector.png  used on input line 65.
@@ -890,18 +890,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 17.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 17.
-) (./Unit1/SphereExamples.tex [38] [39]) [40] (./Unit1/ExercisesUnit1-3.tex [41]) [42] [43]) (./Unit1/Unit1-4.tex [44] [45] [46] [47] [48] [49] (./Unit1/ExercisesUnit1-4.tex [50] [51]) [52] [53]) (./Unit1/Unit1-5.tex
-<figures/intersecting_lines.png, id=494, 830.35219pt x 202.50656pt>
+) (./Unit1/SphereExamples.tex [38] [39]) [40] (./Unit1/ExercisesUnit1-3.tex [41]) [42] [43]) (./Unit1/Unit1-4.tex [44] [45] [46] [47] [48] [49] [50] (./Unit1/ExercisesUnit1-4.tex [51]) [52] [53]) (./Unit1/Unit1-5.tex
+<figures/intersecting_lines.png, id=493, 830.35219pt x 202.50656pt>
 File: figures/intersecting_lines.png Graphic file (type png)
 <use figures/intersecting_lines.png>
 Package pdftex.def Info: figures/intersecting_lines.png  used on input line 14.
 (pdftex.def)             Requested size: 328.82707pt x 80.19469pt.
-<figures/line_intersections_plane.png, id=495, 793.46437pt x 204.765pt>
+<figures/line_intersections_plane.png, id=494, 793.46437pt x 204.765pt>
 File: figures/line_intersections_plane.png Graphic file (type png)
 <use figures/line_intersections_plane.png>
 Package pdftex.def Info: figures/line_intersections_plane.png  used on input line 23.
 (pdftex.def)             Requested size: 328.82707pt x 84.86028pt.
-<figures/three_points_plane.png, id=496, 787.44188pt x 217.5628pt>
+<figures/three_points_plane.png, id=495, 787.44188pt x 217.5628pt>
 File: figures/three_points_plane.png Graphic file (type png)
 <use figures/three_points_plane.png>
 Package pdftex.def Info: figures/three_points_plane.png  used on input line 33.
@@ -922,11 +922,11 @@ Here is how much of TeX's memory you used:
  616433 words of font info for 84 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  101i,17n,107p,586b,1212s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on WTW124.pdf (62 pages, 515972 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on WTW124.pdf (62 pages, 494323 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 541 compressed objects within 6 object streams
+ 674 PDF objects out of 1000 (max. 8388607)
+ 538 compressed objects within 6 object streams
  236 named destinations out of 1000 (max. 500000)
  255 words of extra memory for PDF output out of 10000 (max. 10000000)
 
