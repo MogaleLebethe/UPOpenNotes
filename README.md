@@ -17,7 +17,7 @@ The aim of this repository is to provide students with a well-organized, version
 
 ## ⚠ Disclaimer
 
-This repository is **unofficial**.
+This repository is **unofficial**, and is still in development.
 It is **managed entirely by students**, and **the University of Pretoria is in no way associated with the content** posted here.
 
 The notes and materials are not guaranteed to be error-free. Always verify results and consult official course materials when in doubt.
