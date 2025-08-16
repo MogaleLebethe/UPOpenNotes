@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1755338079.938 "/home/mogale_lebethe/UPOpenNotes/WTW 124/WTW124.tex" "WTW124.pdf" "WTW124" 1755338081.66649 0
+["pdflatex"] 1755338135.77413 "/home/mogale_lebethe/UPOpenNotes/WTW 124/WTW124.tex" "WTW124.pdf" "WTW124" 1755338137.84806 0
   "/etc/texmf/web2c/texmf.cnf" 1755335959.45998 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/mogale_lebethe/UPOpenNotes/WTW 124/WTW124.tex" 1755338079.63063 2249 9644d8ad64287cfdd1ce130f817dea2d ""
+  "/home/mogale_lebethe/UPOpenNotes/WTW 124/WTW124.tex" 1755338135.48026 2248 b2d899876c2d0d62b01ae44d34dd46cb ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -249,10 +249,10 @@
   "Unit1/Unit1-3.tex" 1755336946.70999 34458 2b4ed8327cc9bace3d11483c9cacc3be ""
   "Unit1/Unit1-4.tex" 1755337265.04983 20573 8901a821ed4341921b8ca3b6052c88c2 ""
   "Unit1/Unit1-5.tex" 1755335792.9202 19670 8a0fa21bd6f43ee454b96700d1b35052 ""
-  "WTW124.aux" 1755338081.56084 2256 5d50da54f0f5af61b6dbe86cd2d9d98b "pdflatex"
-  "WTW124.out" 1755338081.56084 1644 1b72bb0ae0c14f7160fcac797bb6f24c "pdflatex"
-  "WTW124.tex" 1755338079.63063 2249 9644d8ad64287cfdd1ce130f817dea2d ""
-  "WTW124.toc" 1755338081.56084 827 f753f6a37d164d8d22fbc46ead2691e9 "pdflatex"
+  "WTW124.aux" 1755338137.75042 2256 5d50da54f0f5af61b6dbe86cd2d9d98b "pdflatex"
+  "WTW124.out" 1755338137.75042 1644 1b72bb0ae0c14f7160fcac797bb6f24c "pdflatex"
+  "WTW124.tex" 1755338135.48026 2248 b2d899876c2d0d62b01ae44d34dd46cb ""
+  "WTW124.toc" 1755338137.75042 827 f753f6a37d164d8d22fbc46ead2691e9 "pdflatex"
   "figures/Image1.tex" 1753632786.66601 1036 70cd8ea399c44f166e8b5e6ebad17547 ""
   "figures/Image2.tex" 1753633835.71659 1105 1bbf024ee73405f9fc61814ff9ad8850 ""
   "figures/Sphere.tex" 1753826166.10158 682 a904fe66d4b07c4de2bdeab20f812362 ""
