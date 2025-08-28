@@ -17,18 +17,7 @@
 \newtcolorbox{notebox}{colback=green!10!white,colframe=green!50!black,title=Note,fonttitle=\bfseries}
 \newtcolorbox{methodbox}{colback=purple!10!white,colframe=purple!70!black,title=Method,fonttitle=\bfseries}
 \newtcolorbox{examplebox}{colback=blue!10!white,colframe=blue!70!black,title=Example,fonttitle=\bfseries}
-
-\title{COS 122: Operating Systems}
-\author{Mogale Lebethe}
-\newcommand{\subtitle}{Open Notes} % <-- subtitle
-
-% Redefine \maketitle to include subtitle
-\pretitle{\begin{center}\LARGE\bfseries}
-\posttitle{\par\Large\subtitle\par\vskip 0.5em\end{center}}
-\preauthor{\begin{center}}
-\postauthor{\par\end{center}}
-\predate{\begin{center}}
-\postdate{\par\end{center}}
+\newtcolorbox{definitionbox}{colback=red!5!white,colframe=red!75!black,title=Definition,fonttitle=\bfseries}
 \setlength{\parindent}{0pt}  % no paragraph indentation
 
 \begin{document}
@@ -256,7 +245,7 @@ Notice that without interrupts, the user program must wait until the I/O operati
 \end{examplebox}
 
 \begin{examplebox}
-    \textbf{Execution With Interrupts}
+    \textbf{Program Execution With Interrupts}
 
     Study the figure which illustrates program execution with interrupts and the accompanying \\ description.
     
@@ -313,7 +302,7 @@ To handle interrupts, the processor must perform several steps during the interr
 
 \end{methodbox}
 
-Naturally, this interrupt handling process introduces some overhead, as the processor must save and restore the program state.
+Naturally, this interrupt handling process introduces some overhead processes, as the processor must save and restore the program state.
 However, the benefits of improved responsiveness and efficient multitasking generally outweigh this overhead.
 
 \newpage
@@ -350,9 +339,9 @@ Cost is the final factor. The cost of memory is usually expressed in terms of co
 \newpage
 As one might expect, there is a trade-off among these three factors:
 \begin{itemize}
-    \item Faster access time $\Rightarrow$ Higher cost per bit
+    \item Shorter access time $\Rightarrow$ Higher cost per bit
     \item Larger capacity $\Rightarrow$ Lower cost per bit
-    \item Larger capacity $\Rightarrow$ Slower access time
+    \item Larger capacity $\Rightarrow$ Longer access time
 \end{itemize}
 
 The solution to this trade-off is to use a memory hierarchy, which is a structure that uses multiple types of memory, each with different speeds, costs, and capacities.
@@ -405,8 +394,15 @@ The trend, going from the top to the bottom of the hierarchy, is as follows:
 
 Now the big question is: How can we achieve a high hit ratio?
 Observations show that memory accesess by the processor tend to cluster (loops, arrays, etc.). This is called the \textit{principle of locality}.
+The solution is to organise data across the memory hierarchy in such a way that the current cluster in use is in the fastest (the cache) memory.
 
-The solution is to organise data across the memory hierarchy so that data in such a way that the current cluster in use is in the fastest (the cache) memory.
+\begin{definitionbox}
+    \textbf{Principle of Locality}
+
+    The principle of locality is the tendency of a program to access a relatively small portion of its address space at any given time, 
+    meaning that recently accessed data and instructions are likely to be accessed again soon.
+\end{definitionbox}
+
 
 
 \subsubsection*{Unit 1.6: Cache Memory}
@@ -414,9 +410,7 @@ The solution is to organise data across the memory hierarchy so that data in suc
 \addcontentsline{toc}{subsubsection}{Unit 1.6: Cache Memory}
 \bookmark[page=\thepage,level=3]{Cache Memory}
 
-Although cache memory is invisible to the OS, it interacts with other memory management components.
-
-On all instruction cycles the processor accesess memory at least once to fetch the instruction and 
+On all instruction cycles, the processor accesess memory at least once to fetch the instruction and 
 often more than once to fetch data. If the memory is slow, the processor will have to wait for it to deliver data, 
 resulting in wasted processing time.
 
@@ -437,4 +431,117 @@ Cache memory can be organised in several ways, but the most common is to divide 
 The cache consists of slots that can hold one block each. If a word is not in the cache, an entire block containing that word is copied from main memory to the cache.
 A binary tag is then added to identify each block in the cache.
 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/Ch01Figure8.png} % path to your figure
+    \caption{\textbf{Cache/Main Memory Organisation}}
+    \label{fig:Ch01Fig8}
+\end{figure}
+As a simple example, suppose we have a 6-bit address and a 2-bit tag. The tag 01 
+refers to the block of locations with the following addresses: [010000, 010001, 010010, 
+010011, 010100, 010101, 010110, 010111, 011000, 011001, 011010, 011011, 011100, 
+011101, 011110, 011111].
+\vspace{0.5em}
+
+The following figure illustrates the read operation.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/Ch01Figure9.png} % path to your figure
+    \caption{\textbf{Cache Read Operation}}
+    \label{fig:Ch01Fig9}
+\end{figure}
+
+\newpage
+
+The design of cache memory involves several considerations:
+\begin{itemize}
+    \item \textbf{Cache Size:} The size of the cache affects the hit ratio. 
+    A larger cache can store more data, potentially increasing the hit ratio, but it also increases cost and access time.
+    \item \textbf{Block Size:} The block size determines how much data is transferred between main memory and the cache.
+    As the block size increases, the hit ratio may improve due to the principle of locality, but larger blocks also increase the time taken to transfer data.
+    [Recall that larger capacity $\Rightarrow$ longer access time.]
+    \item \textbf{Mapping Function:} The mapping function determines which cache slot a block will occupy.
+    This is subject to two constraints:
+    \begin{itemize}
+        \item When one block is read in, it might replace another block already in the cache.
+        \item The more flexible the mapping function, the more complex the search for a block in the cache.
+    \end{itemize}
+    \item \textbf{Replacement Algorithm:} When a new block is loaded into the cache, a decision must be made about which existing block to replace if the cache is full.
+    A common strategy is the Least Recently Used (LRU) algorithm, which replaces the block that has not been accessed for the longest time.
+    \item \textbf{Write Policy:} The write policy dictates when an updated cache block is written back to main memory.
+    There are two extreme policies:
+    \begin{itemize}
+        \item \textbf{Write-Through:} Writing occures every time the block is updated.
+        \item \textbf{Write-Back:} Writing occurs only when the block is replaced.
+    \end{itemize}
+     The latter policy minimizes memory write operations, but leaves main 
+memory in an obsolete state. This can interfere with multiple-processor operation, 
+and with direct memory access by I/O hardware modules.
+\end{itemize}
+
+\subsubsection*{Unit 1.7: Multiprocessors and Multicore Organisation}
+\phantomsection
+\addcontentsline{toc}{subsubsection}{Unit 1.7: Multiprocessors and Multicore Organisation}
+\bookmark[page=\thepage,level=3]{Multiprocessors and Multicore Organisation}
+
+Traditionally, the computer has been viewed as a sequential machine. Most com
+puter programming languages require the programmer to specify algorithms as 
+sequences of instructions. A processor executes programs by executing machine 
+instructions in sequence and one at a time. 
+
+As computer technology has evolved and as the cost of computer hardware has 
+dropped, computer designers have sought more and more opportunities for parallelism, 
+usually to improve performance and, in some cases, to improve reliability.
+
+\begin{definitionbox}
+    \textbf{Symmetric Multiprocessor (SMP)}
+
+    An SMP is a stand-alone computer system with the following characteristics:
+    \begin{enumerate}
+        \item Two or more similar processors of similar capability.
+        \item The processors share a common main memory and I/O facilities, and are connected to the processors 
+        by a system bus or an interconnection network such that each processor has approximately equal memory access time.
+        \item All processors can perform the same functions (hence the term \textit{symmetric}).
+        \item Communcation among processors is by means of shared memory.
+        \item The system is controlled by an operating system that is capable of supporting multiple processors.
+    \end{enumerate}
+\end{definitionbox}
+
+\newpage
+
+An SMP organisation has several advantages over a single-processor organisation:
+\begin{itemize}
+    \item \textbf{Performance:} With multiple processors, an SMP can execute multiple processes simultaneously (\textit{in parallel}), improving overall system throughput and responsiveness.
+    \item \textbf{Availabilty:} The failure of one processor does not necessarily bring down the entire system. Other processors can continue to operate, providing a degree of fault tolerance.
+    \item \textbf{Incremental growth:} A user can enhance the performance of an SMP by adding more processors.
+    \item \textbf{Scalability:} Vendors can offer a range of products with different price and performance characteristics.
+\end{itemize}
+
+The following figure illustrates a typical SMP organisation.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/Ch01Figure10.png} % path to your figure
+    \caption{\textbf{Symmetric Multiprocessor Organisation}}
+    \label{fig:Ch01Fig10}
+\end{figure}
+
+\begin{definitionbox}
+    \textbf{Multicore Processor}
+
+    A multicore processor is a single computing component with two or more independent processing 
+    units called \textit{cores}. The cores are integrated onto a single chip or die
+\end{definitionbox}
+
+Each core in a multicore processor can have its own cache memory, and multiple cores can share a common cache.
+The cores are connected to each other and to the main memory via a high-speed interconnect, allowing for efficient communication and data sharing.
+External communication to other chips is handheld by controllers on the chip.
+
+\begin{notebox}
+    \textbf{Multicore or Multiprocessor?}
+
+    A multicore processor is a single chip with multiple processing units (cores), 
+    while a multiprocessor system consists of multiple separate processors.
+
+\end{notebox}
 \end{document}
