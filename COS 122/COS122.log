@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.16)  28 AUG 2025 01:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.16)  28 AUG 2025 16:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -470,51 +470,100 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count313
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen272
+\pgffor@skip=\dimen273
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count314
+\pgfplotmarksize=\dimen274
+)
+\tikz@lastx=\dimen275
+\tikz@lasty=\dimen276
+\tikz@lastxsaved=\dimen277
+\tikz@lastysaved=\dimen278
+\tikz@lastmovetox=\dimen279
+\tikz@lastmovetoy=\dimen280
+\tikzleveldistance=\dimen281
+\tikzsiblingdistance=\dimen282
+\tikz@figbox=\box71
+\tikz@figbox@bg=\box72
+\tikz@tempbox=\box73
+\tikz@tempbox@bg=\box74
+\tikztreelevel=\count315
+\tikznumberofchildren=\count316
+\tikznumberofcurrentchild=\count317
+\tikz@fig@count=\count318
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count319
+\pgfmatrixcurrentcolumn=\count320
+\pgf@matrix@numberofcolumns=\count321
+)
+\tikz@expandcount=\count322
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip57
+\f@nch@O@elh=\skip58
+\f@nch@O@erh=\skip59
+\f@nch@O@olh=\skip60
+\f@nch@O@orh=\skip61
+\f@nch@O@elf=\skip62
+\f@nch@O@erf=\skip63
+\f@nch@O@olf=\skip64
+\f@nch@O@orf=\skip65
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count314
-\l__pdf_internal_box=\box71
+\l__color_backend_stack_int=\count323
+\l__pdf_internal_box=\box75
 ) (./COS122.aux)
 \openout1 = `COS122.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count315
-\scratchdimen=\dimen272
-\scratchbox=\box72
-\nofMPsegments=\count316
-\nofMParguments=\count317
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count318
-\MPscratchDim=\dimen273
-\MPnumerator=\count319
-\makeMPintoPDFobject=\count320
-\everyMPtoPDFconversion=\toks38
+\scratchcounter=\count324
+\scratchdimen=\dimen283
+\scratchbox=\box76
+\nofMPsegments=\count325
+\nofMParguments=\count326
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count327
+\MPscratchDim=\dimen284
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
+\everyMPtoPDFconversion=\toks40
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count321
+\c@lstlisting=\count330
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -550,93 +599,102 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 33.
+Package hyperref Info: Link coloring ON on input line 34.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(./COS122.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+(./Title.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./COS122.toc)
 \tf@toc=\write4
 \openout4 = `COS122.toc'.
 
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/Ch01Figure1.png, id=32, 693.34032pt x 606.76688pt>
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.27 \newpage
+              [1]) (./COS122.toc)
+\tf@toc=\write5
+\openout5 = `COS122.toc'.
+
+ [2]
+<figures/Ch01Figure1.png, id=45, 693.34032pt x 606.76688pt>
 File: figures/Ch01Figure1.png Graphic file (type png)
 <use figures/Ch01Figure1.png>
-Package pdftex.def Info: figures/Ch01Figure1.png  used on input line 71.
+Package pdftex.def Info: figures/Ch01Figure1.png  used on input line 72.
 (pdftex.def)             Requested size: 317.07614pt x 277.48665pt.
- [2 <./figures/Ch01Figure1.png>]
-<figures/Ch01Figure2.png, id=46, 709.90219pt x 165.61874pt>
+ [3 <./figures/Ch01Figure1.png>]
+<figures/Ch01Figure2.png, id=58, 709.90219pt x 165.61874pt>
 File: figures/Ch01Figure2.png Graphic file (type png)
 <use figures/Ch01Figure2.png>
-Package pdftex.def Info: figures/Ch01Figure2.png  used on input line 121.
+Package pdftex.def Info: figures/Ch01Figure2.png  used on input line 122.
 (pdftex.def)             Requested size: 317.07614pt x 73.97429pt.
- [3 <./figures/Ch01Figure2.png>] [4]
-<figures/Ch01Figure3.png, id=68, 338.01282pt x 410.2828pt>
+ [4 <./figures/Ch01Figure2.png>] [5]
+<figures/Ch01Figure3.png, id=80, 338.01282pt x 410.2828pt>
 File: figures/Ch01Figure3.png Graphic file (type png)
 <use figures/Ch01Figure3.png>
-Package pdftex.def Info: figures/Ch01Figure3.png  used on input line 248.
+Package pdftex.def Info: figures/Ch01Figure3.png  used on input line 249.
 (pdftex.def)             Requested size: 134.93747pt x 163.79092pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 249.
+(caption)                particular \caption on input line 250.
 See the caption package documentation for explanation.
 
-<figures/CH01Figure4.png, id=69, 351.56343pt x 502.87875pt>
+<figures/CH01Figure4.png, id=81, 351.56343pt x 502.87875pt>
 File: figures/CH01Figure4.png Graphic file (type png)
 <use figures/CH01Figure4.png>
-Package pdftex.def Info: figures/CH01Figure4.png  used on input line 281.
+Package pdftex.def Info: figures/CH01Figure4.png  used on input line 282.
 (pdftex.def)             Requested size: 134.93747pt x 193.01424pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 282.
+(caption)                particular \caption on input line 283.
 See the caption package documentation for explanation.
 
-<figures/Ch01Figure5.png, id=70, 687.31781pt x 301.8778pt>
+<figures/Ch01Figure5.png, id=82, 687.31781pt x 301.8778pt>
 File: figures/Ch01Figure5.png Graphic file (type png)
 <use figures/Ch01Figure5.png>
-Package pdftex.def Info: figures/Ch01Figure5.png  used on input line 296.
+Package pdftex.def Info: figures/Ch01Figure5.png  used on input line 297.
 (pdftex.def)             Requested size: 317.07614pt x 139.26161pt.
-[5 <./figures/Ch01Figure3.png> <./figures/Ch01Figure4.png>] [6 <./figures/Ch01Figure5.png>]
-<figures/Ch01Figure6.png, id=101, 645.91313pt x 664.73344pt>
+[6 <./figures/Ch01Figure3.png> <./figures/Ch01Figure4.png>] [7 <./figures/Ch01Figure5.png>]
+<figures/Ch01Figure6.png, id=114, 645.91313pt x 664.73344pt>
 File: figures/Ch01Figure6.png Graphic file (type png)
 <use figures/Ch01Figure6.png>
-Package pdftex.def Info: figures/Ch01Figure6.png  used on input line 323.
+Package pdftex.def Info: figures/Ch01Figure6.png  used on input line 324.
 (pdftex.def)             Requested size: 317.07614pt x 326.31053pt.
- [7 <./figures/Ch01Figure6.png>]
-<figures/Ch01Figure7.png, id=110, 575.14874pt x 542.77782pt>
+ [8 <./figures/Ch01Figure6.png>]
+<figures/Ch01Figure7.png, id=122, 575.14874pt x 542.77782pt>
 File: figures/Ch01Figure7.png Graphic file (type png)
 <use figures/Ch01Figure7.png>
-Package pdftex.def Info: figures/Ch01Figure7.png  used on input line 361.
+Package pdftex.def Info: figures/Ch01Figure7.png  used on input line 362.
 (pdftex.def)             Requested size: 317.07614pt x 299.24098pt.
- [8 <./figures/Ch01Figure7.png>] [9] (./COS122.aux)
+ [9 <./figures/Ch01Figure7.png>] [10] (./COS122.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 23154 strings out of 476106
- 423953 string characters out of 5793933
+ 25902 strings out of 476106
+ 487053 string characters out of 5793933
  1937975 words of memory out of 5000000
- 44784 multiletter control sequences out of 15000+600000
- 563820 words of font info for 58 fonts, out of 8000000 for 9000
+ 47478 multiletter control sequences out of 15000+600000
+ 567447 words of font info for 72 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  83i,11n,93p,656b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/mogale_lebethe/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on COS122.pdf (9 pages, 384854 bytes).
+ </home/mogale_lebethe/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on COS122.pdf (11 pages, 412879 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 58 named destinations out of 1000 (max. 500000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
  176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -9,6 +9,8 @@
 \usepackage{titling}  % allows subtitle
 \usepackage{tcolorbox}  % load package
 \usepackage{caption} % Add this in your preamble
+\usepackage{tikz} % for the border on the title page
+\usepackage{fancyhdr} % for header and footer
 
 \geometry{a4paper, margin=1in}
 
@@ -18,8 +20,7 @@
 
 \title{COS 122: Operating Systems}
 \author{Mogale Lebethe}
-\date{\today}
-\newcommand{\subtitle}{Open Lecture Notes} % <-- subtitle
+\newcommand{\subtitle}{Open Notes} % <-- subtitle
 
 % Redefine \maketitle to include subtitle
 \pretitle{\begin{center}\LARGE\bfseries}
@@ -31,7 +32,7 @@
 \setlength{\parindent}{0pt}  % no paragraph indentation
 
 \begin{document}
-\maketitle
+\input{Title.tex}
 
 \tableofcontents
 
