@@ -544,4 +544,129 @@ External communication to other chips is handheld by controllers on the chip.
     while a multiprocessor system consists of multiple separate processors.
 
 \end{notebox}
+
+\newpage
+
+\subsection*{Chapter 2: Operating System Overview}
+\phantomsection
+\addcontentsline{toc}{subsection}{Chapter 2: Operating System Overview}
+\bookmark[page=\thepage,level=2]{Chapter 2: Operating System Overview}
+\setcounter{figure}{0}
+
+\subsubsection*{Unit 2.1: Operating System Objectives and Functions}
+\phantomsection
+\addcontentsline{toc}{subsubsection}{Unit 2.1: Operating System Objectives and Functions}
+\bookmark[page=\thepage,level=3]{Operating System Objectives and Functions}
+
+In the previous chapter, we discussed the basic elements of a computer system.
+From an abstract point of view, all these components can be viewed as `resources'.
+The main task of an operating system (OS) is to manage these resources and 
+allocate them to users and programs in an efficient and fair manner.
+
+\begin{definitionbox}
+    \textbf{Operating System (OS)}
+
+    An OS is a program that controls the execution of application programs, 
+    and acts as an interface between the user of a computer and the computer hardware.
+\end{definitionbox}
+
+An OS can be thought of as having three main objectives:
+\begin{itemize}
+    \item \textbf{Convenience:} The OS makes the computer system convenient to use by providing a user-friendly interface.
+    \item \textbf{Efficiency:} The OS manages the hardware resources to ensure that they are used efficiently, maximising system performance.
+    \item \textbf{Ability to evolve:} The OS provides a stable and consistent environment that allows application programs to evolve over time 
+    without being affected by changes in the underlying hardware.
+\end{itemize}
+
+\textbf{The OS an a User/Computer Interface}
+
+The hardware and software of a computer system are complex, as depicted in the figure below.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/Ch02Figure1.png} % path to your figure
+    \caption{\textbf{Computer System Components}}
+    \label{fig:Ch02Fig1}
+\end{figure}
+
+From this figure, we can see that the user is `shielded' from the confusing details of the hardware.
+Instead of seeing the hardware directly, the user sees the OS. The OS provides well-defined functions that allow the user to interact with the hardware without 
+needing to understand its complexities. The hardware's resources are similarly `shielded' from inappropriate access or unwanted utilisation by 
+incompetent or malicious users.
+
+The OS provides support services for:
+\begin{itemize}
+    \item Program development and execution
+    \item Access to I/O devices
+    \item Controlled access to files
+    \item Concurrent access to the system by multiple users
+    \item Error detection and recovery
+    \item Accounting and performance monitoring
+\end{itemize}
+
+\textbf{The OS as a Resource Manager}
+
+Since the OS itself is a program, it competes with other programs for the same hardware resources, and must
+therefore manage itself.
+
+The OS has to frequently `relinquish' control to the user program, and must rely on specialised hardware mechanisms
+to regain control. (Recall from \textit{Unit 1.4: Interrupts}.)
+
+\subsubsection*{Unit 2.2: Evolution of Operating Systems}
+\phantomsection
+\addcontentsline{toc}{subsubsection}{Unit 2.2: Evolution of Operating Systems}
+\bookmark[page=\thepage,level=3]{Evolution of Operating Systems}
+
+A major OS will evolve over time for a number of reasons:
+\begin{itemize}
+    \item Hardware upgrades
+    \item New hardware types
+    \item New services
+    \item Fixes
+\end{itemize}
+
+The evolution of an OS can be illustrated by the following figure:
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/Ch02Figure2.png} % path to your figure
+    \caption{\textbf{Evolution of an Operating System}}
+    \label{fig:Ch02Fig2}
+\end{figure}
+
+Early OSs mainly mimicked the work-behaviour of the human operator. 
+
+The underlying principle was that
+a user-program $U$ had to run entirely before another user-program $V$ could run. This is called a \textit{batch system}.
+
+The \textit{monitor} component of the OS had to recognise the completion of $U$, and then carry out the necessary 
+administrative tasks (code loading, etc.) to prepare for the execution of $V$, and so on, until an entire `batch' of jobs
+had been executed.
+
+\newpage
+To understand how this scheme works, let us look at it from two points of view: 
+that of the monitor, and that of the processor.
+\begin{itemize}
+    \item \textbf{Monitor's Point of View:} The monitor controls the sequence of events, and must always be in main memory and available for execution.
+    This is called the \textit{resident monitor}. The monitor reads in a job and gives it control. The job then returns control to the monitor when it terminates.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.4\textwidth]{figures/Ch02Figure3.png} % path to your figure
+        \caption{\textbf{Memory Layout for a Resident Monitor}}
+        \label{fig:Ch02Fig3}
+    \end{figure}
+    \item \textbf{Processor's Point of View:} Note that the processor does not know whether it is executing a user program or the monitor.
+    Notice the following implications:
+    \begin{itemize}
+        \item CPU executes an instruction from the memory containing the monitor $\Rightarrow$ OS is running.
+        \item CPU executes an the instructions from the user program (until an error or termination) $\Rightarrow$ user program is running.
+    \end{itemize}
+    When control is transferred from the monitor to the user program, the CPU is fetching and executing instructions from the user program.
+    When control is transferred back to the monitor, the CPU is fetching and executing instructions from the monitor.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figures/Ch02Figure4.png} % path to your figure
+        \caption{\textbf{Transfer of Control Between Monitor and User Program}}
+        \label{fig:Ch02Fig4}
+    \end{figure}
+\end{itemize}
+
 \end{document}

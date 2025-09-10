@@ -7,3 +7,6 @@
 \contentsline {subsubsection}{Unit 1.5: The Memory Hierarchy}{7}{section*.20}%
 \contentsline {subsubsection}{Unit 1.6: Cache Memory}{9}{section*.23}%
 \contentsline {subsubsection}{Unit 1.7: Multiprocessors and Multicore Organisation}{11}{section*.27}%
+\contentsline {subsection}{Chapter 2: Operating System Overview}{13}{section*.30}%
+\contentsline {subsubsection}{Unit 2.1: Operating System Objectives and Functions}{13}{section*.32}%
+\contentsline {subsubsection}{Unit 2.2: Evolution of Operating Systems}{14}{section*.35}%
