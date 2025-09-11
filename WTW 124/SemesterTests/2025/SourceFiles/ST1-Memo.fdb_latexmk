@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1757549335.14418 "/home/mogale_lebethe/UPOpenNotes/WTW 124/SemesterTests/2025/SourceFiles/ST1-Memo.tex" "ST1-Memo.pdf" "ST1-Memo" 1757549336.55208 0
+["pdflatex"] 1757589001.79216 "/home/mogale_lebethe/UPOpenNotes/WTW 124/SemesterTests/2025/SourceFiles/ST1-Memo.tex" "ST1-Memo.pdf" "ST1-Memo" 1757589003.0243 0
   "/etc/texmf/web2c/texmf.cnf" 1755335959.45998 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/mogale_lebethe/UPOpenNotes/WTW 124/SemesterTests/2025/SourceFiles/ST1-Memo.tex" 1757549334.6783 14240 ebc8d85581528d0e8c7031057399a536 ""
+  "/home/mogale_lebethe/UPOpenNotes/WTW 124/SemesterTests/2025/SourceFiles/ST1-Memo.tex" 1757589001.44828 14476 78fd294a7c7fb507f8f876c7472b1afd ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
@@ -203,9 +203,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755336674.61013 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755336705 6831044 3af05c1a3ec9b98dd291120a36c900b9 ""
-  "ST1-Memo.aux" 1757549336.4283 162 f042405b684a8c860cba07045d113040 "pdflatex"
-  "ST1-Memo.out" 1757549336.3383 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "ST1-Memo.tex" 1757549334.6783 14240 ebc8d85581528d0e8c7031057399a536 ""
+  "ST1-Memo.aux" 1757589002.85827 162 f042405b684a8c860cba07045d113040 "pdflatex"
+  "ST1-Memo.out" 1757589002.74827 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "ST1-Memo.tex" 1757589001.44828 14476 78fd294a7c7fb507f8f876c7472b1afd ""
   "TitleMemo.jpg" 1757533275.78412 842621 227ab74b864e1d50d19b3047a03b1e4e ""
   (generated)
   "ST1-Memo.aux"

@@ -103,8 +103,8 @@
     For instance, let
     \[
         A = \begin{bmatrix}
-            1 & 0\\
-            0 & -1
+            1 & 1\\
+            0 & 0
         \end{bmatrix}.
     \]
     Then \(A \neq 0 \text{ and } A \neq I\).
@@ -113,24 +113,29 @@
         \[
         \begin{aligned}
             A(A-I) &= \begin{bmatrix}
-            1 & 0\\
-            0 & -1
+            1 & 1\\
+            0 & 0
         \end{bmatrix}
         \left(\begin{bmatrix}
-            1 & 0\\
-            0 & -1
+            1 & 1\\
+            0 & 0
         \end{bmatrix} - \begin{bmatrix}
             1 & 0\\
             0 & 1
         \end{bmatrix}\right)\\  
         &=\begin{bmatrix}
-            1 & 0\\
-            0 & -1
-        \end{bmatrix}\begin{bmatrix}
-            0 & 0\\
+            1 & 1\\
             0 & 0
+        \end{bmatrix}\begin{bmatrix}
+            0 & 1\\
+            0 & -1
         \end{bmatrix}\\
-        &= 0.  \qquad \qquad \text{[By the properties of matrix multiplication]}
+        &= \begin{bmatrix}
+            0 & 1-1\\
+            0 & 0
+        \end{bmatrix} = \begin{bmatrix}
+            0 & 0\\ 0&0
+        \end{bmatrix} = 0.
         \end{aligned} 
     \]
     Therefore the claim is false.
@@ -306,13 +311,19 @@ Consider the following two lines in \(\mathbb{R}^3\):
     \color{blue}
     \(P\) has normal vector \(\bar{n} = \langle 2,-1,-1\rangle\) and \(L_1\) has direction vector \(\bar{d} = \langle 1,2,-3\rangle\).\\
     Then \(\bar{n} \cdot \bar{d} \neq 0\), by the properties of the dot product. By definition of parallelism, \(\bar{n} \nparallel  \bar{d}\), and
-    so by the theorem on the relationship between a plane and a line, \(L_1\) \(P\) intesect in at least one point.
+    so by the theorem on the relationship between a plane and a line, \(L_1\) and \(P\) intesect in at least one point.
 
+    Let \(\bar{y} \in L_1\) be a point where \(t= 0\).\\
+    Then \(\bar{y} = \langle1,2,-3\rangle\)
+    We have \(2 -  2- (-3) = 3\). Therefore \(\bar{y} \in P\).
+
+    \vspace{0.5em}
     Let \(\bar{x} \in L_1\) be a point where \(t = 1\).\\
     Then \(\bar{x} = \langle2,4,-6\rangle.\)
-    We have \( 2(4) -4 + 6 = 10 \neq 3\). Hence \(\bar{x} \in P\), and \(L_1 \nsubseteq P\).
-
-    The claim is false.
+    We have \( 2(4) -4 + 6 = 10 \neq 3\). Hence \(\bar{x} \notin P\). 
+    
+    \vspace{0.5em}
+    Therefore \(L_1 \nsubseteq P\). The claim is false.
 
     \color{black}
 
@@ -351,11 +362,7 @@ Consider the following two lines in \(\mathbb{R}^3\):
         \end{aligned}
     \]
     \color{black}
-\end{enumerate}
 
-\newpage
-
-\begin{enumerate}[label=\alph*),resume=Last]
     \item Let \(L\) be a line passing through the point \(\bar{p} = \langle2,0,0\rangle\) such that \(L\) is
     perpendicular to the line \(L_2\) at their intersection. Find a vector equation of the line \(L\). \hfill [4]
     
@@ -387,7 +394,7 @@ Consider the following two lines in \(\mathbb{R}^3\):
 
     \vspace{1em}
 
-    \(L, P\) must be such that \(L \perp P\), so it must be the case that \(L || \bar{n}\).\\ Let \(\bar{d} = 2\bar{m}\). Then by definition,
+    \(L, P\) must be such that \(L \perp P\), so it must be the case that \(\bar{d} \parallel\bar{n}\).\\ Let \(\bar{d} = 2\bar{m}\). Then by definition,
     \(\bar{d}\parallel\bar{m}\), and furthermore \(L\perp Q\)!
 
     Then an equation that satisfies this is:
