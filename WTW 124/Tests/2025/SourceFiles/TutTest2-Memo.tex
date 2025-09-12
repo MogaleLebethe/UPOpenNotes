@@ -1,0 +1,158 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=0.5in}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usetikzlibrary{arrows.meta}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\begin{center}
+    \textbf{\large WTW 124 \hfill CLASS TEST 2: Student-Worked Solutions}
+\end{center}
+
+\textbf{Show your steps clearly and note that this is a closed book test.}
+
+\begin{enumerate}
+    \item Let \(\bar{a},\bar{b} \in \mathbb{R}^3\). Then \(\bar{a}\times\bar{b} =\bar{b}\times\bar{a} \). True or False?
+    Support your answer in detail. \hfill [2]
+    
+    \color{blue}
+    Consider \(\bar{a} = \langle 1,0,1\rangle \text{ and } \bar{b} = \langle2,1,2\rangle\).
+
+    \(
+        \begin{aligned}
+            \text{Then } &\bar{a}\times\bar{b} &=\langle0-1,2-2,1-0\rangle = \langle-1,0,1\rangle\\
+            \text{and }   &\bar{b} \times \bar{a} &= \langle1-0,2-2,0-1\rangle = \langle1,0,-1\rangle
+        \end{aligned}
+    \)
+
+    Therefore \(\bar{a}\times\bar{b} =\bar{b}\times\bar{a} \). The claim is false.
+    \color{black}
+    \item Let \[A = \begin{bmatrix} 1 & 4 & 3 \end{bmatrix}.\]
+    Find, if possible, \(AA^T\) and \(A^TA\). \hfill [3]
+    
+    \color{blue}
+    \(A\) has size \(1\times 3\) and \(A^T = \begin{bmatrix}
+        1\\4\\3
+    \end{bmatrix}\) has size \(3\times1\).
+
+    Hence \(AA^T\) and \(A^TA\) exist as matrices with sizes \(1\times 1\) and \(3\times 3\) respectively.
+
+    \(
+        \begin{aligned}
+            AA^T &= \begin{bmatrix} 1 & 4 & 3 \end{bmatrix}\begin{bmatrix}1\\4\\3\end{bmatrix}\\
+                &= \begin{bmatrix}\langle1,4,3\rangle\cdot\langle1,4,3\rangle\end{bmatrix}\\
+                &=  \begin{bmatrix}1+16+9\end{bmatrix} = \begin{bmatrix}26\end{bmatrix}.
+        \end{aligned}
+    \)
+
+    \(
+        \begin{aligned}
+            A^TA &= \begin{bmatrix}1\\4\\3\end{bmatrix}\begin{bmatrix} 1 & 4 & 3 \end{bmatrix}\\
+                &= \begin{bmatrix}
+                    \langle1\rangle\cdot\langle1\rangle & \langle1\rangle\cdot\langle4\rangle & \langle1\rangle\cdot\langle3\rangle\\
+                    \langle4\rangle\cdot\langle1\rangle & \langle4\rangle\cdot\langle4\rangle & \langle4\rangle\cdot\langle3\rangle\\
+                    \langle3\rangle\cdot\langle1\rangle & \langle3\rangle\cdot\langle4\rangle & \langle3\rangle\cdot\langle3\rangle
+                \end{bmatrix}\\
+                &= \begin{bmatrix}
+                    1 & 4 & 3\\
+                    4 & 16 & 12\\
+                    3 & 12 & 9
+                    \end{bmatrix} 
+        \end{aligned}
+    \)
+
+    \color{black}
+
+    \item Let \(A\) be a \(2\times2\) matrix. Prove or disprove the following statement:
+    if \(A\neq 0\), then \(A^2 \neq 0\). \hfill [2]
+    
+    \color{blue}
+    Consider \(A = \begin{bmatrix} 0 & 1\\ 0 & 0\end{bmatrix} \neq 0\).
+
+    \(
+        \begin{aligned}
+        \text{Then } A^2 &= \begin{bmatrix} 0 & 1\\ 0 & 0\end{bmatrix} \begin{bmatrix} 0 & 1\\ 0 & 0\end{bmatrix}\\
+            &= \begin{bmatrix} 0 & 0\\ 0 & 0\end{bmatrix} = 0.
+        \end{aligned}
+    \)
+
+    The claim is false.
+
+    \color{black}
+    \newpage
+    \item Find, if possible, conditions on \(a,b\in \mathbb{R}\) such that the following system of linear equations
+    has only one solution, by using Gaussian elimination: \hfill [3]
+
+    \[
+    \begin{aligned}
+        -x+3y+2z &= -8\\
+        x+z &= 2\\
+        3x+3y+az &= b.
+    \end{aligned}
+    \]
+    \color{blue}
+
+    We interpret the system as an augmented matrix and apply Gaussian elimination:
+
+    \(
+        \begin{aligned}
+            &\left[
+                \begin{array}{ccc|c}
+                    -1 & 3 & 2 & -8\\
+                    1 & 0 & 1 & 2\\
+                    3 & 3 & a & b
+                \end{array}
+            \right] \sim
+            \left[
+                \begin{array}{ccc|c}
+                    1 & 0 & 1 & 2\\
+                    -1 & 3 & 2 & -8\\
+                    3 & 3 & a & b
+                \end{array}
+            \right] \left(R_1 \leftrightarrow R_2\right) \sim
+            \left[
+                \begin{array}{ccc|c}
+                    1 & 0 & 1 & 2\\
+                    0 & 3 & 3 & -6\\
+                    3 & 3 & a & b
+                \end{array}
+            \right] \left(R_2+ R_1 \rightarrow R_2\right)\\
+            \sim &\left[
+                \begin{array}{ccc|c}
+                    1 & 0 & 1 & 2\\
+                    0 & 3 & 3 & -6\\
+                    0 & 3 & a-3 & b-6
+                \end{array}
+            \right] \left(R_3 - 3R_1 \rightarrow R_3\right) \sim
+            \left[
+                \begin{array}{ccc|c}
+                    1 & 0 & 1 & 2\\
+                    0 & 3 & 3 & -6\\
+                    0 & 0 & a-6 & b-12
+                \end{array}
+            \right] \left(R_3 - R_2 \rightarrow R_3\right)
+        \end{aligned}
+    \)
+
+    Then by the theorem on the consistency of a linear system, the system has a unique solution if and only if 
+    
+    \[\forall b\in\mathbb{R}, a \neq 6\].
+\end{enumerate}
+\end{document}
