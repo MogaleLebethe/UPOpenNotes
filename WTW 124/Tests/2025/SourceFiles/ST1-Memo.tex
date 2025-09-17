@@ -39,15 +39,15 @@
     \[
         \begin{aligned}
             \bar{u} \times \bar{v} &= \langle1,2,-1\rangle\times\langle3,1,2\rangle\\
-            &=\langle4+1,2+3,-1-6\rangle\\
-            &=\langle5,5,-5\rangle.
+            &=\langle4-(-1),-3-2,1-6\rangle\\
+            &=\langle5,-5,-5\rangle.
         \end{aligned}
     \]
-    Then \(\|\langle5,5,-5\rangle\| = \sqrt{5^2+5^2+(-5)^2} = 5\sqrt{3}\), so two unit vectors perpendicular to both \(\bar{u}\) and \(\bar{v}\) are
+    Then \(\|\langle5,-5,-5\rangle\| = \sqrt{5^2+(-5)^2+(-5)^2} = 5\sqrt{3}\), so two unit vectors perpendicular to both \(\bar{u}\) and \(\bar{v}\) are
     \[
     \begin{aligned}
-      &\frac{1}{5\sqrt{3}}\langle5,5,-5\rangle = \frac{1}{\sqrt{3}}\langle1,1,-1\rangle = \langle\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}}\rangle\\
-        &\text{and } -\frac{1}{5\sqrt{3}}\langle5,5,-5\rangle = -\frac{1}{\sqrt{3}}\langle1,1,-1\rangle = \langle-\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}}\rangle.  
+      &\frac{1}{5\sqrt{3}}\langle5,-5,-5\rangle = \frac{1}{\sqrt{3}}\langle1,-1,-1\rangle = \langle\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}}\rangle\\
+        &\text{and } -\frac{1}{5\sqrt{3}}\langle5,-5,-5\rangle = -\frac{1}{\sqrt{3}}\langle1,-1,-1\rangle = \langle-\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}}\rangle.  
     \end{aligned}
         \]
     \color{black}
@@ -327,7 +327,7 @@ Consider the following two lines in \(\mathbb{R}^3\):
 
     \color{black}
 
-    \item Give Cartesian equations for two parallel, each containing one of the lines above. \hfill [4]
+    \item Give Cartesian equations for two parallel lines, each containing one of the lines above. \hfill [4]
     \color{blue}
 
     \(L_1\) has direction vector \(\bar{d_1} = \langle1,2,-3\rangle\), and \(L_2\) direction vector \(\bar{d_2} = \langle-2,4,-6\rangle\).
@@ -341,24 +341,24 @@ Consider the following two lines in \(\mathbb{R}^3\):
     \[
         \begin{aligned}
             \bar{n} &= \bar{d_1} \times \bar{d_2} \\
-            &= \langle -12+12,-6-6,4+4 \rangle\\
-            &= \langle 0, -12, 8 \rangle
+            &= \langle -12+12,6-(-6),4+4 \rangle\\
+            &= \langle 0, 12, 8 \rangle
         \end{aligned}
     \]
     \(P_1\) has equation
     \[
         \begin{aligned}
-            &\langle 0, -12, 8 \rangle \cdot \left(\langle x,y,z\rangle - \langle 1,2,-3\rangle\right) = 0\\
-            &\Rightarrow \langle 0, -12, 8 \rangle \cdot \langle x-1,y-2,z+3\rangle = 0\\
-            &\Rightarrow -12y+24+8z+24 = 0 \Rightarrow -12y+8z = -48 \Rightarrow -3y + 2z = -12.
+            &\langle 0, 12, 8 \rangle \cdot \left(\langle x,y,z\rangle - \langle 1,2,-3\rangle\right) = 0\\
+            &\Rightarrow \langle 0, 12, 8 \rangle \cdot \langle x-1,y-2,z+3\rangle = 0\\
+            &\Rightarrow 12y-24+8z+24 = 0 \Rightarrow 12y+8z = 0 \Rightarrow 3y + 2z = 0.
         \end{aligned}
     \]
     \(P_2\) has equation
     \[
         \begin{aligned}
-            &\langle 0, -12, 8 \rangle \cdot \left(\langle x,y,z\rangle - \langle -3,1,0\rangle\right) = 0\\
-            &\Rightarrow \langle 0, -12, 8 \rangle \cdot \langle x+3, y-1, z \rangle = 0\\
-            &\Rightarrow -12y +12 +8z = 0 \Rightarrow -12y + 8z = -12 \Rightarrow -3y + 2z = -3
+            &\langle 0, 12, 8 \rangle \cdot \left(\langle x,y,z\rangle - \langle -3,1,0\rangle\right) = 0\\
+            &\Rightarrow \langle 0, 12, 8 \rangle \cdot \langle x+3, y-1, z \rangle = 0\\
+            &\Rightarrow 12y -12 +8z = 0 \Rightarrow 12y + 8z = -2 \Rightarrow 3y + 2z = 3
         \end{aligned}
     \]
     \color{black}
